@@ -1,0 +1,12 @@
+{
+  "name": "tu-usuario/ignite-theme",
+  "description": "Ignite Theme boilerplate for WordPress with TailwindCSS",
+  "type": "wordpress-theme",
+  "license": "GPL-2.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "IgniteTheme\\": "inc/"
+    }
+  },
+  "require": {}
+}

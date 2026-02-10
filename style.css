@@ -1,0 +1,15 @@
+/*
+Theme Name: Ignite Theme
+Theme URI: https://example.com/
+Author: Tu Nombre
+Author URI: https://example.com/
+Description: Boilerplate theme with TailwindCSS. Desactiva estilos de Gutenberg.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ignite-theme
+*/
+
+/* Import compiled Tailwind CSS */
+@import url('assets/css/style.css');
+
