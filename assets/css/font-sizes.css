@@ -1,0 +1,99 @@
+h1,h2,h3,h4,h5,h6{
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+body  h1 {
+        font-size: var(--h1-responsive);
+    }
+    body  h2,body .h2 {  
+        font-size: var(--h2-responsive);
+    }
+    body  h3,body  .h3 {
+        font-size: var(--h3-responsive);
+    }
+    body  h4,body  .h4 {
+        font-size: var(--h4-responsive);
+    }
+    body  h5,body  .h5 {
+        font-size: var(--h5-responsive);
+    }
+    body  h6,body  .h6 {
+        font-size: var(--h6-responsive);
+    }
+    .regular{
+        font-weight:400;
+    }
+    .medium{
+        font-weight:500;
+    }
+    .semibold{
+        font-weight:600;
+    }
+    .bold{
+        font-weight:600;
+    }
+
+@media (min-width: 782px) {
+    body  h1 {
+        font-size: var(--h1-tablet);
+    }
+    body  h2 {
+        font-size: var(--h2-tablet);
+    }
+    body  h3,body  .h3 {
+        font-size: var(--h3-tablet);
+    }
+        body  h4,body  .h4 {
+            font-size: var(--h4-tablet);
+        }
+        body  h5,body  .h5 {
+            font-size: var(--h5-tablet);
+        }
+        body  h6,body  .h6 {
+            font-size: var(--h6-tablet);
+        }
+}
+@media (min-width: 922px) {
+    body  h1,body  .h1 {
+    font-size: var(--h1);
+}
+body  h2,body  .h2 {
+    font-size: var(--h2);
+}
+body  h3,body  .h3 {
+    font-size: var(--h3);
+}
+body  h4,body  .h4 {
+    font-size: var(--h4);
+}
+body  h5,body  .h5 {  
+    font-size: var(--h5);
+}
+body  h6,body  .h6 {
+    font-size: var(--h6);
+}
+    
+}
+@media (min-width: 1200px) {
+    /* Use the same desktop sizes for large screens (can be adjusted if needed) */
+    body  h1,body  .h1 {
+        font-size: var(--h1);
+    }
+    body  h2,body  .h2 {
+        font-size: var(--h2);
+    }
+    body  h3,body  .h3 {
+        font-size: var(--h3);
+    }
+    body  h4,body  .h4 {
+        font-size: var(--h4);
+    }
+    body  h5,body  .h5 {
+        font-size: var(--h5);
+    }
+    body  h6,body  .h6 {
+        font-size: var(--h6);
+    }
+}

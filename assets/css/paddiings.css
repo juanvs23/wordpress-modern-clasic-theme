@@ -1,0 +1,298 @@
+/** Paddings */
+/**
+guia   
+   --h1: 44px;
+	--h2: 30px;
+	--h3: 24px;
+	--text:16px;
+	--h50:50px;
+	--h100:100px;  
+**/
+
+.p-0{padding:0 !important}
+.p-8{padding:8px !important}
+.p-16{padding:var(--text) !important}
+.p-24{padding:var(--h3) !important}
+.p-30{padding:var(--h2) !important}
+.p-44{padding:var(--h1) !important}
+.p-50{padding:var(--h50) !important}
+.p-100{padding:var(--h100) !important}
+.pr-0{padding-right:0 !important}
+.pr-16{padding-right:var(--text) !important}
+.pr-24{padding-right:var(--h3) !important}
+.pr-30{padding-right:var(--h2) !important}
+.pr-44{padding-right:var(--h1) !important}
+.pr-50{padding-right:var(--h50) !important}
+.pr-100{padding-right:var(--h100) !important}
+.pl-0{padding-left:0 !important}
+.pl-16{padding-left:var(--text) !important}
+.pl-24{padding-left:var(--h3) !important}
+.pl-30{padding-left:var(--h2) !important}
+.pl-44{padding-left:var(--h1) !important}
+.pl-50{padding-left:var(--h50) !important}
+.pl-100{padding-left:var(--h100) !important}
+.pt-0{padding-top:0 !important}
+.pt-16{padding-top:var(--text) !important}
+.pt-24{padding-top:var(--h3) !important}
+.pt-30{padding-top:var(--h2) !important}
+.pt-44{padding-top:var(--h1) !important}
+.pt-50{padding-top:var(--h50) !important}
+.pt-100{padding-top:var(--h100) !important}
+.pb-0{padding-bottom:0 !important}
+.pb-4{padding-bottom:4px !important}
+.pb-8{padding-bottom:8px !important}
+.pb-16{padding-bottom:var(--text) !important}
+.pb-24{padding-bottom:var(--h3) !important}
+.pb-30{padding-bottom:var(--h2) !important}
+.pb-44{padding-bottom:var(--h1) !important}
+.pb-50{padding-bottom:var(--h50) !important}
+.pb-100{padding-bottom:var(--h100) !important}
+.px-0{padding-left:0 !important; padding-right:0 !important}
+.px-16{padding-left:var(--text) !important; padding-right:var(--text) !important}
+.px-24{padding-left:var(--h3) !important; padding-right:var(--h3) !important}
+.px-30{padding-left:var(--h2) !important; padding-right:var(--h2) !important}
+.px-44{padding-left:var(--h1) !important; padding-right:var(--h1) !important}
+.px-50{padding-left:var(--h50) !important; padding-right:var(--h50) !important}
+.px-100{padding-left:var(--h100	) !important; padding-right:var(--h100) !important}
+.py-0{padding-top:0 !important; padding-bottom:0 !important}
+.py-16{padding-top:var(--text) !important; padding-bottom:var(--text) !important}
+.py-24{padding-top:var(--h3) !important; padding-bottom:var(--h3) !important}
+.py-30{padding-top:var(--h2) !important; padding-bottom:var(--h2) !important}
+.py-44{padding-top:var(--h1) !important; padding-bottom:var(--h1) !important}
+.py-50{padding-top:var(--h50) !important; padding-bottom:var(--h50) !important}
+.py-100{padding-top:var(--h100) !important; padding-bottom:var(--h100) !important}
+
+
+@media (max-width:781px) {
+	.max-sm\:p-0{padding:0 !important}
+	.max-sm\:p-16{padding:var(--text) !important}
+	.max-sm\:p-24{padding:var(--h3) !important}
+	.max-sm\:p-30{padding:var(--h2) !important}
+	.max-sm\:p-44{padding:var(--h1) !important}
+	.max-sm\:p-50{padding:var(--h50) !important}
+	.max-sm\:p-100{padding:var(--h100) !important}
+
+	.max-sm\:pr-0{padding-right:0 !important}
+	.max-sm\:pr-16{padding-right:var(--text) !important}
+	.max-sm\:pr-24{padding-right:var(--h3) !important}
+	.max-sm\:pr-30{padding-right:var(--h2) !important}
+	.max-sm\:pr-44{padding-right:var(--h1) !important}
+	.max-sm\:pr-50{padding-right:var(--h50) !important}
+	.max-sm\:pr-100{padding-right:var(--h100) !important}
+
+	.max-sm\:pl-0{padding-left:0 !important}
+	.max-sm\:pl-16{padding-left:var(--text) !important}
+	.max-sm\:pl-24{padding-left:var(--h3) !important}
+	.max-sm\:pl-30{padding-left:var(--h2) !important}
+	.max-sm\:pl-44{padding-left:var(--h1) !important}
+	.max-sm\:pl-50{padding-left:var(--h50) !important}
+	.max-sm\:pl-100{padding-left:var(--h100) !important}
+
+	.max-sm\:pt-0{padding-top:0 !important}
+	.max-sm\:pt-16{padding-top:var(--text) !important}
+	.max-sm\:pt-24{padding-top:var(--h3) !important}
+	.max-sm\:pt-30{padding-top:var(--h2) !important}
+	.max-sm\:pt-44{padding-top:var(--h1) !important}
+	.max-sm\:pt-50{padding-top:var(--h50) !important}
+	.max-sm\:pt-100{padding-top:var(--h100) !important}
+
+	.max-sm\:pb-0{padding-bottom:0 !important}
+	.max-sm\:pb-16{padding-bottom:var(--text) !important}
+	.max-sm\:pb-24{padding-bottom:var(--h3) !important}
+	.max-sm\:pb-30{padding-bottom:var(--h2) !important}
+	.max-sm\:pb-44{padding-bottom:var(--h1) !important}
+	.max-sm\:pb-50{padding-bottom:var(--h50) !important}
+	.max-sm\:pb-100{padding-bottom:var(--h100) !important}
+	.max-sm\:px-0{padding-left:0 !important; padding-right:0 !important}
+	.max-sm\:px-16{padding-left:var(--text) !important; padding-right:var(--text) !important}
+	.max-sm\:px-24{padding-left:var(--h3) !important; padding-right:var(--h3) !important}
+	.max-sm\:px-30{padding-left:var(--h2) !important; padding-right:var(--h2) !important}
+	.max-sm\:px-44{padding-left:var(--h1) !important; padding-right:var(--h1) !important}
+	.max-sm\:px-50{padding-left:var(--h50) !important; padding-right:var(--h50) !important}
+	.max-sm\:px-100{padding-left:var(--h100) !important; padding-right:var(--h100) !important}
+
+	.max-sm\:py-0{padding-top:0 !important; padding-bottom:0 !important}
+	.max-sm\:py-16{padding-top:var(--text) !important; padding-bottom:var(--text) !important}
+	.max-sm\:py-24{padding-top:var(--h3) !important; padding-bottom:var(--h3) !important}
+	.max-sm\:py-30{padding-top:var(--h2) !important; padding-bottom:var(--h2) !important}
+	.max-sm\:py-44{padding-top:var(--h1) !important; padding-bottom:var(--h1) !important}
+	.max-sm\:py-50{padding-top:var(--h50) !important; padding-bottom:var(--h50) !important}
+	.max-sm\:py-100{padding-top:var(--h100) !important; padding-bottom:var(--h100) !important}
+}
+
+
+
+@media (min-width:782px) {
+	.md\:p-0{padding:0 !important}
+	.md\:p-16{padding:var(--text) !important}
+	.md\:p-24{padding:var(--h3) !important}
+	.md\:p-30{padding:var(--h2) !important}
+	.md\:p-44{padding:var(--h1) !important}
+	.md\:p-50{padding:var(--h50) !important}
+	.md\:p-100{padding:var(--h100) !important}
+
+	.md\:pr-0{padding-right:0 !important}
+	.md\:pr-16{padding-right:var(--text) !important}
+	.md\:pr-24{padding-right:var(--h3) !important}
+	.md\:pr-30{padding-right:var(--h2) !important}
+	.md\:pr-44{padding-right:var(--h1) !important}
+	.md\:pr-50{padding-right:var(--h50) !important}
+	.md\:pr-100{padding-right:var(--h100) !important}
+
+	.md\:pl-0{padding-left:0 !important}
+	.md\:pl-16{padding-left:var(--text) !important}
+	.md\:pl-24{padding-left:var(--h3) !important}
+	.md\:pl-30{padding-left:var(--h2) !important}
+	.md\:pl-44{padding-left:var(--h1) !important}
+	.md\:pl-50{padding-left:var(--h50) !important}
+	.md\:pl-100{padding-left:var(--h100) !important}
+
+	.md\:pt-0{padding-top:0 !important}
+	.md\:pt-16{padding-top:var(--text) !important}
+	.md\:pt-24{padding-top:var(--h3) !important}
+	.md\:pt-30{padding-top:var(--h2) !important}
+	.md\:pt-44{padding-top:var(--h1) !important}
+	.md\:pt-50{padding-top:var(--h50) !important}
+	.md\:pt-100{padding-top:var(--h100) !important}
+
+	.md\:pb-0{padding-bottom:0 !important}
+	.md\:pb-16{padding-bottom:var(--text) !important}
+	.md\:pb-24{padding-bottom:var(--h3) !important}
+	.md\:pb-30{padding-bottom:var(--h2) !important}
+	.md\:pb-44{padding-bottom:var(--h1) !important}
+	.md\:pb-50{padding-bottom:var(--h50) !important}
+	.md\:pb-100{padding-bottom:var(--h100) !important}
+	.md\:px-0{padding-left:0 !important; padding-right:0 !important}
+	.md\:px-16{padding-left:var(--text) !important; padding-right:var(--text) !important}
+	.md\:px-24{padding-left:var(--h3) !important; padding-right:var(--h3) !important}
+	.md\:px-30{padding-left:var(--h2) !important; padding-right:var(--h2) !important}
+	.md\:px-44{padding-left:var(--h1) !important; padding-right:var(--h1) !important}
+	.md\:px-50{padding-left:var(--h50) !important; padding-right:var(--h50) !important}
+	.md\:px-100{padding-left:var(--h100) !important; padding-right:var(--h100) !important}
+
+	.md\:py-0{padding-top:0 !important; padding-bottom:0 !important}
+	.md\:py-16{padding-top:var(--text) !important; padding-bottom:var(--text) !important}
+	.md\:py-24{padding-top:var(--h3) !important; padding-bottom:var(--h3) !important}
+	.md\:py-30{padding-top:var(--h2) !important; padding-bottom:var(--h2) !important}
+	.md\:py-44{padding-top:var(--h1) !important; padding-bottom:var(--h1) !important}
+	.md\:py-50{padding-top:var(--h50) !important; padding-bottom:var(--h50) !important}
+	.md\:py-100{padding-top:var(--h100) !important; padding-bottom:var(--h100) !important}
+}
+
+
+@media (min-width:922px) {
+	.lg\:p-0{padding:0 !important}
+	.lg\:p-16{padding:var(--text) !important}
+	.lg\:p-24{padding:var(--h3) !important}
+	.lg\:p-30{padding:var(--h2) !important}
+	.lg\:p-44{padding:var(--h1) !important}
+	.lg\:p-50{padding:var(--h50) !important}
+	.lg\:p-100{padding:var(--h100) !important}
+
+	.lg\:pr-0{padding-right:0 !important}
+	.lg\:pr-16{padding-right:var(--text) !important}
+	.lg\:pr-24{padding-right:var(--h3) !important}
+	.lg\:pr-30{padding-right:var(--h2) !important}
+	.lg\:pr-44{padding-right:var(--h1) !important}
+	.lg\:pr-50{padding-right:var(--h50) !important}
+	.lg\:pr-100{padding-right:var(--h100) !important}
+
+	.lg\:pl-0{padding-left:0 !important}
+	.lg\:pl-16{padding-left:var(--text) !important}
+	.lg\:pl-24{padding-left:var(--h3) !important}
+	.lg\:pl-30{padding-left:var(--h2) !important}
+	.lg\:pl-44{padding-left:var(--h1) !important}
+	.lg\:pl-50{padding-left:var(--h50) !important}
+	.lg\:pl-100{padding-left:var(--h100) !important}
+
+	.lg\:pt-0{padding-top:0 !important}
+	.lg\:pt-16{padding-top:var(--text) !important}
+	.lg\:pt-24{padding-top:var(--h3) !important}
+	.lg\:pt-30{padding-top:var(--h2) !important}
+	.lg\:pt-44{padding-top:var(--h1) !important}
+	.lg\:pt-50{padding-top:var(--h50) !important}
+	.lg\:pt-100{padding-top:var(--h100) !important}
+
+	.lg\:pb-0{padding-bottom:0 !important}
+	.lg\:pb-16{padding-bottom:var(--text) !important}
+	.lg\:pb-24{padding-bottom:var(--h3) !important}
+	.lg\:pb-30{padding-bottom:var(--h2) !important}
+	.lg\:pb-44{padding-bottom:var(--h1) !important}
+	.lg\:pb-50{padding-bottom:var(--h50) !important}
+	.lg\:pb-100{padding-bottom:var(--h100) !important}
+	.lg\:px-0{padding-left:0 !important; padding-right:0 !important}
+	.lg\:px-16{padding-left:var(--text) !important; padding-right:var(--text) !important}
+	.lg\:px-24{padding-left:var(--h3) !important; padding-right:var(--h3) !important}
+	.lg\:px-30{padding-left:var(--h2) !important; padding-right:var(--h2) !important}
+	.lg\:px-44{padding-left:var(--h1) !important; padding-right:var(--h1) !important}
+	.lg\:px-50{padding-left:var(--h50) !important; padding-right:var(--h50) !important}
+	.lg\:px-100{padding-left:var(--h100) !important; padding-right:var(--h100) !important}
+
+	.lg\:py-0{padding-top:0 !important; padding-bottom:0 !important}
+	.lg\:py-16{padding-top:var(--text) !important; padding-bottom:var(--text) !important}
+	.lg\:py-24{padding-top:var(--h3) !important; padding-bottom:var(--h3) !important}
+	.lg\:py-30{padding-top:var(--h2) !important; padding-bottom:var(--h2) !important}
+	.lg\:py-44{padding-top:var(--h1) !important; padding-bottom:var(--h1) !important}
+	.lg\:py-50{padding-top:var(--h50) !important; padding-bottom:var(--h50) !important}
+	.lg\:py-100{padding-top:var(--h100) !important; padding-bottom:var(--h100) !important}
+}
+
+
+@media (min-width:1200px) {
+	.xl\:p-0{padding:0 !important}
+	.xl\:p-16{padding:var(--text) !important}
+	.xl\:p-24{padding:var(--h3) !important}
+	.xl\:p-30{padding:var(--h2) !important}
+	.xl\:p-44{padding:var(--h1) !important}
+	.xl\:p-50{padding:var(--h50) !important}
+	.xl\:p-100{padding:var(--h100) !important}
+
+	.xl\:pr-0{padding-right:0 !important}
+	.xl\:pr-16{padding-right:var(--text) !important}
+	.xl\:pr-24{padding-right:var(--h3) !important}
+	.xl\:pr-30{padding-right:var(--h2) !important}
+	.xl\:pr-44{padding-right:var(--h1) !important}
+	.xl\:pr-50{padding-right:var(--h50) !important}
+	.xl\:pr-100{padding-right:var(--h100) !important}
+
+	.xl\:pl-0{padding-left:0 !important}
+	.xl\:pl-16{padding-left:var(--text) !important}
+	.xl\:pl-24{padding-left:var(--h3) !important}
+	.xl\:pl-30{padding-left:var(--h2) !important}
+	.xl\:pl-44{padding-left:var(--h1) !important}
+	.xl\:pl-50{padding-left:var(--h50) !important}
+	.xl\:pl-100{padding-left:var(--h100) !important}
+
+	.xl\:pt-0{padding-top:0 !important}
+	.xl\:pt-16{padding-top:var(--text) !important}
+	.xl\:pt-24{padding-top:var(--h3) !important}
+	.xl\:pt-30{padding-top:var(--h2) !important}
+	.xl\:pt-44{padding-top:var(--h1) !important}
+	.xl\:pt-50{padding-top:var(--h50) !important}
+	.xl\:pt-100{padding-top:var(--h100) !important}
+
+	.xl\:pb-0{padding-bottom:0 !important}
+	.xl\:pb-16{padding-bottom:var(--text) !important}
+	.xl\:pb-24{padding-bottom:var(--h3) !important}
+	.xl\:pb-30{padding-bottom:var(--h2) !important}
+	.xl\:pb-44{padding-bottom:var(--h1) !important}
+	.xl\:pb-50{padding-bottom:var(--h50) !important}
+	.xl\:pb-100{padding-bottom:var(--h100) !important}
+	.xl\:px-0{padding-left:0 !important; padding-right:0 !important}
+	.xl\:px-16{padding-left:var(--text) !important; padding-right:var(--text) !important}
+	.xl\:px-24{padding-left:var(--h3) !important; padding-right:var(--h3) !important}
+	.xl\:px-30{padding-left:var(--h2) !important; padding-right:var(--h2) !important}
+	.xl\:px-44{padding-left:var(--h1) !important; padding-right:var(--h1) !important}
+	.xl\:px-50{padding-left:var(--h50) !important; padding-right:var(--h50) !important}
+	.xl\:px-100{padding-left:var(--h100) !important; padding-right:var(--h100) !important}
+
+	.xl\:py-0{padding-top:0 !important; padding-bottom:0 !important}
+	.xl\:py-16{padding-top:var(--text) !important; padding-bottom:var(--text) !important}
+	.xl\:py-24{padding-top:var(--h3) !important; padding-bottom:var(--h3) !important}
+	.xl\:py-30{padding-top:var(--h2) !important; padding-bottom:var(--h2) !important}
+	.xl\:py-44{padding-top:var(--h1) !important; padding-bottom:var(--h1) !important}
+	.xl\:py-50{padding-top:var(--h50) !important; padding-bottom:var(--h50) !important}
+	.xl\:py-100{padding-top:var(--h100) !important; padding-bottom:var(--h100) !important}
+}
+
+

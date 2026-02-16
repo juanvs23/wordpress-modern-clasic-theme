@@ -6,6 +6,7 @@ get_header();
 <main id="site-content">
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
+        <?php var_dump(get_post_type()); ?>
             <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
         <?php endwhile; ?>
         <?php the_posts_pagination(); ?>

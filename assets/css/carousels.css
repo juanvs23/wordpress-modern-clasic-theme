@@ -1,0 +1,66 @@
+.wp_carousel_single .slick-list.draggable,
+.testimonial-list{
+    width: calc(100% - 75px);
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ignite-slick-button {
+    min-width: 40px;
+    min-height: 55px;
+}
+.slick-item-wrapp {
+    padding: 0 30px;
+}
+.ignite-slick-button svg {
+    display: block !important;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slick-disabled{
+    opacity: 0;
+    pointer-events: none;
+}
+.ignite-slick-button {
+    width: 46px;
+    height: 46px;
+    z-index: 9;
+}
+.slick-dots {
+    bottom: -50px;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li button{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(var(--primary-color));
+    transition: all 0.3s ease;
+}
+.slick-dots li button:hover,
+.slick-dots li.slick-active button{
+    background-color: rgb(var(--third-color));
+}
+.slick-dots li button:before{
+    display: none !important;
+}
+.slick-dots li{
+    width: auto;
+    height: auto;
+
+}
+
+@media (max-width: 781px){
+    .slick-item-wrapp {
+        padding: 0 0px;
+    }
+    .testimonial-content p {
+    font-size: calc(var(--text) - 5px) !important;
+}
+}

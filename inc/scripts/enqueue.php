@@ -5,27 +5,87 @@
 
 if ( ! function_exists( 'ignite_enqueue_assets' ) ) {
     function ignite_enqueue_assets() {
-        $css_file = get_template_directory() . '/assets/css/style.css';
-        $css_uri  = get_template_directory_uri() . '/assets/css/style.css';
+         $handle = 'ignite_';
+        $assets_url = trailingslashit(IGNITE_ASSETS_URI);
 
-        if ( file_exists( $css_file ) ) {
-            wp_enqueue_style( 'ignite-style', $css_uri, array(), filemtime( $css_file ) );
-        } else {
-            wp_enqueue_style( 'ignite-style', $css_uri, array(), '1.0.0' );
-        }
+        //fonts
+        wp_enqueue_style( $handle . 'fonts', $assets_url . 'css/fonts.css', array(),IGNITE_VERSION );
+        //general
+        wp_enqueue_style( $handle . 'child-style', $assets_url . 'css/general.css', array(  $handle . 'fonts' ),IGNITE_VERSION );
+        //layout
+        wp_enqueue_style($handle . 'layout-style', $assets_url . 'css/layout.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //radius
+        wp_enqueue_style($handle . 'radius-style', $assets_url . 'css/radius.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //margins
+        wp_enqueue_style($handle . 'margins-style', $assets_url . 'css/margins.css', array( $handle . 'child-style' ),IGNITE_VERSION ); 
+        //paddiings (typo in filename kept as-is)
+        wp_enqueue_style($handle . 'paddiings-style', $assets_url . 'css/paddiings.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //colors
+        wp_enqueue_style( $handle .'colors', $assets_url . 'css/colors.css', array( $handle . 'child-style' ), IGNITE_VERSION);
+        //borders
+        wp_enqueue_style($handle . 'borders-style', $assets_url . 'css/borders.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //buttons
+        wp_enqueue_style($handle . 'buttons-style', $assets_url . 'css/buttons.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //carusels
+        wp_enqueue_style($handle . 'carusels-style', $assets_url . 'css/carousels.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //font-sizes
+        wp_enqueue_style($handle . 'font-sizes-style', $assets_url . 'css/font-sizes.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //utilities
+        wp_enqueue_style($handle . 'utilities', $assets_url . 'css/utilities.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //style
+        wp_enqueue_style($handle . 'style', $assets_url . 'css/style.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //gaps
+        wp_enqueue_style($handle . 'gaps-style', $assets_url . 'css/gaps.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //positions
+        wp_enqueue_style($handle . 'positions-style', $assets_url . 'css/positions.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        //heights
+        wp_enqueue_style($handle . 'heights-style', $assets_url . 'css/heights.css', array( $handle . 'child-style' ),IGNITE_VERSION );
+        // menu
+        wp_enqueue_style( $handle . 'menu-style', $assets_url . 'css/menu.css', array( $handle . 'child-style' ),IGNITE_VERSION );
 
-        // Ejemplo de encolado de scripts / librerías (ajustar según assets disponibles)
-        $js_uri = get_template_directory_uri() . '/assets/js';
+        /*libs*/
+        //swiper
+        wp_enqueue_style( $handle . 'slick-style', $assets_url . 'libs/slick/slick.min.css', array(),IGNITE_VERSION );
+        wp_enqueue_script( $handle . 'slick-script', $assets_url . 'libs/slick/slick.min.js', array( 'jquery' ),IGNITE_VERSION, [
+            'defer' => true,
+            'in_footer' => true,
+        ] );
+        wp_enqueue_style($handle.'-carousel', $assets_url . '/css/carousels.css', array( $handle . 'slick-style' ),IGNITE_VERSION );
+        wp_enqueue_script( $handle.'-carrusels', $assets_url . '/js/carrusels.js',  [$handle . 'slick-script'], IGNITE_VERSION, [
+            'defer' => true,
+            'in_footer' => true,
+        ] );
+        //aos
+        wp_enqueue_style( $handle . 'aos-style', $assets_url . 'libs/aos/aos.css', array(),IGNITE_VERSION );
+        wp_enqueue_script( $handle . 'aos-script', $assets_url . 'libs/aos/aos.js', array( 'jquery' ),IGNITE_VERSION, [
+            'defer' => true,
+            'in_footer' => true,
+        ] );
+        //baguettebox
+        wp_enqueue_style( $handle . 'baguettebox-style', $assets_url . 'libs/baguettebox/baguetteBox.min.css', array(),IGNITE_VERSION );
+        wp_enqueue_script( $handle . 'baguettebox-script', $assets_url . 'libs/baguettebox/baguetteBox.min.js', array( 'jquery' ),IGNITE_VERSION, [
+            'defer' => true,
+            'in_footer' => true,
+        ] );
+        //accordeons
+        wp_enqueue_script( $handle . 'accordeons-script', $assets_url . 'js/accordeon.js', array( 'jquery' ),IGNITE_VERSION, [
+            'defer' => true,
+            'in_footer' => true,
+        ] );
+         //accordeons
+        wp_enqueue_script( $handle . 'menu-script', $assets_url . 'js/menu.js', array( 'jquery' ),IGNITE_VERSION, [
+            'defer' => true,
+            'in_footer' => true,
+        ] );
 
-        // Encolar librería externa incluida en assets/libs si existe
-        if ( file_exists( get_template_directory() . '/assets/libs/slick/slick.min.js' ) ) {
-            wp_enqueue_script( 'slick', $js_uri . '/libs/slick/slick.min.js', array( 'jquery' ), '1.8.1', true );
-        }
 
-        // Script principal del tema
-        if ( file_exists( get_template_directory() . '/assets/js/main.js' ) ) {
-            wp_enqueue_script( 'ignite-main', $js_uri . '/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/assets/js/main.js' ), true );
-        }
+
+
+        // Tailwind purged (heuristic output)
+        wp_enqueue_script( $handle . 'child-script', $assets_url . 'js/script.js', array( 'jquery', $handle . 'aos-script', $handle . 'baguettebox-script'),IGNITE_VERSION,  [
+            'defer' => true,
+            'in_footer' => true,
+        ]  );
     }
 }
 add_action( 'wp_enqueue_scripts', 'ignite_enqueue_assets' ,99999);

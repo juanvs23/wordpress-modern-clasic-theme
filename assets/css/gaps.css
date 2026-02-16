@@ -1,0 +1,125 @@
+/** gaps */
+/**
+guia   
+   --h1: 44px;
+	--h2: 30px;
+	--h3: 24px;
+	--text:16px;
+	--h50:50px;
+	--h100:100px;  
+**/
+.gap-0{
+    gap:0px !important;
+}
+.gap-4{
+    gap:calc(var(--text) / 4) !important;
+}
+.gap-8{
+    gap:calc(var(--text) / 2) !important;
+}
+.gap-16{
+    gap:var(--text) !important;
+}
+.gap-24{
+    gap:var(--h3) !important;
+}
+.gap-30{
+    gap:var(--h2) !important;
+}
+.gap-44{
+    gap:var(--h1) !important;
+}
+.gap-50{
+    gap:var(--h50) !important;
+}
+.gap-100{
+    gap:var(--h100) !important;
+}
+@media (min-width: 782px) {
+    .md\:gap-0{
+        gap:0px !important;
+    }
+    .md\:gap-4{
+        gap:calc(var(--text) / 4) !important;
+    }
+    .md\:gap-8{
+        gap:calc(var(--text) / 2) !important;
+    }
+    .md\:gap-16{
+        gap:var(--text) !important;
+    }
+    .md\:gap-24{
+        gap:var(--h3) !important;
+    }
+    .md\:gap-30{
+        gap:var(--h2) !important;
+    }
+    .md\:gap-44{
+        gap:var(--h1) !important;
+    }
+    .md\:gap-50{
+        gap:var(--h50) !important;
+    }
+    .md\:gap-100{
+        gap:var(--h100) !important;
+    }
+}
+@media (min-width: 922px) {
+    .lg\:gap-0{
+        gap:0px !important;
+    }
+    .lg\:gap-4{
+        gap:calc(var(--text) / 4) !important;
+    }
+    .lg\:gap-8{
+        gap:calc(var(--text) / 2) !important;
+    }
+    .lg\:gap-16{
+        gap:var(--text) !important;
+    }
+    .lg\:gap-24{
+        gap:var(--h3) !important;
+    }
+    .lg\:gap-30{
+        gap:var(--h2) !important;
+    }
+    .lg\:gap-44{
+        gap:var(--h1) !important;
+    }
+    .lg\:gap-50{
+        gap:var(--h50) !important;
+    }
+    .lg\:gap-100{
+        gap:var(--h100) !important;
+    }
+}
+@media (min-width: 1200px) {
+    .xl\:gap-0{
+        gap:0px !important;
+    }
+    .xl\:gap-4{
+        gap:calc(var(--text) / 4) !important;
+    }
+    .xl\:gap-8{
+        gap:calc(var(--text) / 2) !important;
+    }
+    .xl\:gap-16{
+        gap:var(--text) !important;
+    }
+    .xl\:gap-24{
+        gap:var(--h3) !important;
+    }
+    .xl\:gap-30{
+        gap:var(--h2) !important;
+    }
+    .xl\:gap-44{
+        gap:var(--h1) !important;
+    }
+    .xl\:gap-50{
+        gap:var(--h50) !important;
+    }
+    .xl\:gap-100{
+        gap:var(--h100) !important;
+    }
+}
+

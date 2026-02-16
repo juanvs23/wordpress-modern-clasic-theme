@@ -1,0 +1,113 @@
+
+.pt-border {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+.pb-border {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.pl-border {
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+.pr-border {
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+.border{
+    border-width: 1px;
+    border-style: solid;
+}
+
+@media (max-width:781px) {
+  .max-sm\:pt-border {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .max-sm\:pb-border {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .max-sm\:pl-border {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .max-sm\:pr-border {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .max-sm\:border {
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@media (min-width:782px) {
+  .md\:pt-border {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .md\:pb-border {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .md\:pl-border {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .md\:pr-border {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .md\:border {
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@media (min-width:922px) {
+  .lg\:pt-border {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .lg\:pb-border {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .lg\:pl-border {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .lg\:pr-border {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .lg\:border {
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@media (min-width:1200px) {
+  .xl\:pt-border {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .xl\:pb-border {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .xl\:pl-border {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .xl\:pr-border {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .xl\:border {
+    border-width: 1px;
+    border-style: solid;
+  }
+}

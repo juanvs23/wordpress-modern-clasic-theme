@@ -1,0 +1,468 @@
+.text-center {
+    text-align: center !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+.items-center{
+    align-items: center !important;
+}
+.flex-col{
+    flex-direction: column !important;
+}
+.flex-row{
+    flex-direction: row !important;
+}
+.flex-col{
+    flex-direction: column !important;
+}
+.flex-row{
+    flex-direction: row !important;
+}
+.flex-reverse{
+    flex-direction: row-reverse !important;
+}
+.flex-col-reverse{
+    flex-direction: column-reverse !important;
+}
+.justify-center{
+    justify-content: center !important;
+}
+.justify-end{
+    justify-content: flex-end !important;
+}
+.justify-between{
+    justify-content: space-between !important;
+}
+.wrap{
+    flex-wrap: wrap !important;
+}
+.nowrap{
+    flex-wrap: nowrap !important;
+}
+.shadow-base{
+  
+box-shadow: 0 0 24px 0 rgba(90, 111, 136, 0.16) !important;
+}
+.no-shadow{
+    box-shadow: none !important;
+}
+body .no-underline a,body .no-underline{
+    text-decoration: none !important;
+}
+.object-cover{
+    object-fit: cover !important;
+}
+.object-contain{
+    object-fit: contain !important;
+}
+.hidden{
+    display: none !important;
+}
+.aspect-w-16{
+    aspect-ratio: 16 / 9 !important;
+}
+.aspect-w-4{
+    aspect-ratio: 4 / 3 !important;
+}
+.aspect-w-1{
+    aspect-ratio: 1 / 1 !important;
+}
+.aspect-2\/3{
+    aspect-ratio: 2 / 3 !important;
+}
+.overflow-hidden{
+    overflow: hidden !important;
+}
+.overflow-scroll{
+    overflow: scroll !important;
+}
+.transition{
+    transition: all 0.3s ease-in-out !important;
+}
+.transition-fast{
+    transition: all 0.15s ease-in-out !important;
+}
+.transition-slow{
+    transition: all 0.5s ease-in-out !important;
+}
+.w-fit{
+    width: fit-content !important;
+}
+.h-fit{
+    height: fit-content !important;
+}
+.w-full{
+    width: 100% !important;
+}
+.h-full{
+    height: 100% !important;
+}
+.radius-img-4 img{ 
+    border-radius: 4px !important;
+}
+.max-w-full{
+    max-width: 100% !important;
+}
+.mx-w-800{
+    max-width: 800px !important;
+    margin: auto !important;
+}
+.mx-w-1000{
+    max-width: 1000px !important;
+    margin: auto !important;
+}
+.cursor-pointer{
+    cursor: pointer !important;
+}
+@media (max-width:781px) {
+    .mobile-none{
+        display: none !important;
+    }
+}
+@media (min-width:782px) {
+.md\:text-center {
+    text-align: center !important;
+}
+.md\:text-left {
+    text-align: left !important;
+}
+.md\:text-right {
+    text-align: right !important;
+}
+
+.md\:items-center{
+    align-items: center !important;
+}
+.md\:flex-col{
+    flex-direction: column !important;
+}
+.md\:flex-row{
+    flex-direction: row !important;
+}
+.md\:flex-reverse{
+    flex-direction: row-reverse !important;
+}
+.md\:flex-col-reverse{
+    flex-direction: column-reverse !important;
+}
+.md\:justify-center{
+    justify-content: center !important;
+}
+.md\:justify-end{
+    justify-content: flex-end !important;
+}
+.md\:wrap{
+    flex-wrap: wrap !important;
+}
+.md\:nowrap{
+    flex-wrap: nowrap !important;
+}
+.md\:shadow-base{
+    box-shadow: 0 0 24px 0 rgba(90, 111, 136, 0.16) !important;
+}
+.md\:no-shadow{
+    box-shadow: none !important;
+}
+.md\:aspect-2\/3{
+    aspect-ratio: 2 / 3 !important;
+}
+.md\:justify-between{
+    justify-content: space-between !important;
+}
+.md\:no-underline a, .md\:no-underline{
+    text-decoration: none !important;
+}
+.md\:object-cover{
+    object-fit: cover !important;
+}
+.md\:object-contain{
+    object-fit: contain !important;
+}
+.md\:hidden{
+    display: none !important;
+}
+.md\:block{
+    display: block !important;
+}
+.md\:aspect-w-16{
+    aspect-ratio: 16 / 9 !important;
+}
+.md\:aspect-w-4{
+    aspect-ratio: 4 / 3 !important;
+}
+.md\:aspect-w-1{
+    aspect-ratio: 1 / 1 !important;
+}
+.md\:overflow-hidden{
+    overflow: hidden !important;
+}
+.md\:overflow-scroll{
+    overflow: scroll !important;
+}
+.md\:transition{
+    transition: all 0.3s ease-in-out !important;
+}
+.md\:transition-fast{
+    transition: all 0.15s ease-in-out !important;
+}
+.md\:transition-slow{
+    transition: all 0.5s ease-in-out !important;
+}
+.md\:w-fit{
+    width: fit-content !important;
+}
+.md\:h-fit{
+    height: fit-content !important;
+}
+.md\:w-full{
+    width: 100% !important;
+}
+.md\:h-full{
+    height: 100% !important;
+}
+.md\:radius-img-4 img{ 
+    border-radius: 4px !important;
+}
+.md\:max-w-full{
+    max-width: 100% !important;
+}
+.md\:mx-w-800{
+    max-width: 800px !important;
+    margin: auto !important;
+}
+.md\:mx-w-1000{
+    max-width: 1000px !important;
+    margin: auto !important;
+}
+}
+@media (min-width:922px) {
+.lg\:text-center {
+    text-align: center !important;
+}
+.lg\:text-left {
+    text-align: left !important;
+}
+.lg\:text-right {
+    text-align: right !important;
+}
+.lg\:aspect-2\/3{
+    aspect-ratio: 2 / 3 !important;
+}
+.lg\:items-center{
+    align-items: center !important;
+}
+.lg\:flex-col{
+    flex-direction: column !important;
+}
+.lg\:flex-row{
+    flex-direction: row !important;
+}
+.lg\:flex-reverse{
+    flex-direction: row-reverse !important;
+}
+.lg\:flex-col-reverse{
+    flex-direction: column-reverse !important;
+}
+.lg\:justify-center{
+    justify-content: center !important;
+}
+.lg\:justify-end{
+    justify-content: flex-end !important;
+}
+.lg\:wrap{
+    flex-wrap: wrap !important;
+}
+.lg\:nowrap{
+    flex-wrap: nowrap !important;
+}
+.lg\:shadow-base{
+    box-shadow: 0 0 24px 0 rgba(90, 111, 136, 0.16) !important;
+}
+.lg\:no-shadow{
+    box-shadow: none !important;
+}
+.lg\:justify-between{
+    justify-content: space-between !important;
+}
+.lg\:no-underline a, .lg\:no-underline{
+    text-decoration: none !important;
+}
+.lg\:object-cover{
+    object-fit: cover !important;
+}
+.lg\:object-contain{
+    object-fit: contain !important;
+}
+.lg\:hidden{
+    display: none !important;
+}
+.lg\:aspect-w-16{
+    aspect-ratio: 16 / 9 !important;
+}
+.lg\:aspect-w-4{
+    aspect-ratio: 4 / 3 !important;
+}
+.lg\:aspect-w-1{
+    aspect-ratio: 1 / 1 !important;
+}
+.lg\:overflow-hidden{
+    overflow: hidden !important;
+}
+.lg\:overflow-scroll{
+    overflow: scroll !important;
+}
+.lg\:transition{
+    transition: all 0.3s ease-in-out !important;
+}
+.lg\:transition-fast{
+    transition: all 0.15s ease-in-out !important;
+}
+.lg\:transition-slow{
+    transition: all 0.5s ease-in-out !important;
+}
+.lg\:w-fit{
+    width: fit-content !important;
+}
+.lg\:h-fit{
+    height: fit-content !important;
+}
+.lg\:w-full{
+    width: 100% !important;
+}
+.lg\:h-full{
+    height: 100% !important;
+}
+.lg\:radius-img-4 img{ 
+    border-radius: 4px !important;
+}
+.lg\:max-w-full{
+    max-width: 100% !important;
+}
+.lg\:mx-w-800{
+    max-width: 800px !important;
+    margin: auto !important;
+}
+.lg\:mx-w-1000{
+    max-width: 1000px !important;
+    margin: auto !important;
+}
+}
+@media (min-width:1200px) {
+.xl\:text-center {
+    text-align: center !important;
+}
+.xl\:text-left {
+    text-align: left !important;
+}
+.xl\:text-right {
+    text-align: right !important;
+}
+
+.xl\:aspect-2\/3{
+    aspect-ratio: 2 / 3 !important;
+}
+
+.xl\:items-center{
+    align-items: center !important;
+}
+.xl\:flex-col{
+    flex-direction: column !important;
+}
+.xl\:flex-row{
+    flex-direction: row !important;
+}
+.xl\:flex-reverse{
+    flex-direction: row-reverse !important;
+}
+.xl\:flex-col-reverse{
+    flex-direction: column-reverse !important;
+}
+.xl\:justify-center{
+    justify-content: center !important;
+}
+.xl\:justify-end{
+    justify-content: flex-end !important;
+}
+.xl\:wrap{
+    flex-wrap: wrap !important;
+}
+.xl\:nowrap{
+    flex-wrap: nowrap !important;
+}
+.xl\:shadow-base{
+    box-shadow: 0 0 24px 0 rgba(90, 111, 136, 0.16) !important;
+}
+.xl\:no-shadow{
+    box-shadow: none !important;
+}
+.xl\:justify-between{
+    justify-content: space-between !important;
+}
+.xl\:no-underline a, .xl\:no-underline{
+    text-decoration: none !important;
+}
+.xl\:object-cover{
+    object-fit: cover !important;
+}
+.xl\:object-contain{
+    object-fit: contain !important;
+}
+.xl\:hidden{
+    display: none !important;
+}
+.xl\:aspect-w-16{
+    aspect-ratio: 16 / 9 !important;
+}
+.xl\:aspect-w-4{
+    aspect-ratio: 4 / 3 !important;
+}
+.xl\:aspect-w-1{
+    aspect-ratio: 1 / 1 !important;
+}
+.xl\:overflow-hidden{
+    overflow: hidden !important;
+}
+.xl\:overflow-scroll{
+    overflow: scroll !important;
+}
+.xl\:transition{
+    transition: all 0.3s ease-in-out !important;
+}
+.xl\:transition-fast{
+    transition: all 0.15s ease-in-out !important;
+}
+.xl\:transition-slow{
+    transition: all 0.5s ease-in-out !important;
+}
+.xl\:w-fit{
+    width: fit-content !important;
+}
+.xl\:h-fit{
+    height: fit-content !important;
+}
+.xl\:w-full{
+    width: 100% !important;
+}
+.xl\:h-full{
+    height: 100% !important;
+}
+.xl\:radius-img-4 img{ 
+    border-radius: 4px !important;
+}
+.xl\:max-w-full{
+    max-width: 100% !important;
+}
+.xl\:mx-w-800{
+    max-width: 800px !important;
+    margin: auto !important;
+}
+.xl\:mx-w-1000{
+    max-width: 1000px !important;
+    margin: auto !important;
+}
+}

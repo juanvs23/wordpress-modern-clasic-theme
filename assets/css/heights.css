@@ -1,0 +1,29 @@
+/*
+--h1: 44px;
+--h2: 30px;
+--h3: 24px;
+--text:16px;
+--h50:50px;
+--h100:100px;
+*/
+.height-0{
+    height:0px !important;
+}
+.h-100{
+    height:var(--h100) !important;
+}
+.h-50{
+    height:var(--h50) !important;
+}
+.h-40{
+    height:calc(var(--h1) - 4px) !important;
+}
+.max-h-100{
+    max-height:calc(var(--h100)) !important;
+}
+.max-h-150{
+    max-height:calc(var(--h100) + 50px) !important;
+}
+.h-150{
+    height:calc(var(--h100) + 50px) !important;
+}

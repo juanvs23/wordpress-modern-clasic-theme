@@ -1,0 +1,131 @@
+.bg-primary{
+    background-color: rgb(var(--primary-color)) !important;
+}
+.bg-secondary{
+    background-color: rgb(var(--secondary-color)) !important;
+}
+.bg-third{
+    background-color: rgb(var(--third-color)) !important;
+}
+.bg-soft{
+    background-color: rgb(var(--soft-color)) !important;
+}
+.bg-white{
+    background-color: rgb(var(--white-color)) !important;
+}
+.bg-black{
+    background-color: rgb(var(--black-color)) !important;
+}
+.text-primary{
+    color: rgb(var(--primary-color)) !important;
+}
+.text-secondary{
+    color: rgb(var(--secondary-color)) !important;
+}
+.text-third{
+    color: rgb(var(--third-color)) !important;
+}
+.text-soft{
+    color: rgb(var(--soft-color)) !important;
+}
+.text-white{
+    color: rgb(var(--white-color)) !important;
+}
+.text-black{
+    color: rgb(var(--black-color)) !important;
+}
+.border-primary{
+    border-color: rgb(var(--primary-color)) !important;
+}
+.border-secondary{
+    border-color: rgb(var(--secondary-color)) !important;
+}
+.border-third{
+    border-color: rgb(var(--third-color)) !important;
+}
+.border-soft{
+    border-color: rgb(var(--soft-color)) !important;
+}
+.border-white{
+    border-color: rgb(var(--white-color)) !important;
+}
+.border-black{
+    border-color: rgb(var(--black-color)) !important;
+}
+.bg-transparent{
+    background-color: transparent !important;
+}
+.text-transparent{
+    color: transparent !important;
+}
+.border-transparent{
+    border-color: transparent !important;
+}
+/*hover*/
+
+/* Hover utilities (estilo Tailwind: clase con escape de `:`) */
+.hover\:bg-primary:hover{
+    background-color: rgb(var(--primary-color)) !important;
+}
+.hover\:bg-secondary:hover{
+    background-color: rgb(var(--secondary-color)) !important;
+}
+.hover\:bg-third:hover{
+    background-color: rgb(var(--third-color)) !important;
+}
+.hover\:bg-soft:hover{
+    background-color: rgb(var(--soft-color)) !important;
+}
+.hover\:bg-white:hover{
+    background-color: rgb(var(--white-color)) !important;
+}
+.hover\:bg-black:hover{
+    background-color: rgb(var(--black-color)) !important;
+}
+.hover\:bg-transparent:hover{
+    background-color: transparent !important;
+}
+
+.hover\:text-primary:hover{
+    color: rgb(var(--primary-color)) !important;
+}
+.hover\:text-secondary:hover{
+    color: rgb(var(--secondary-color)) !important;
+}
+.hover\:text-third:hover{
+    color: rgb(var(--third-color)) !important;
+}
+.hover\:text-soft:hover{
+    color: rgb(var(--soft-color)) !important;
+}
+.hover\:text-white:hover{
+    color: rgb(var(--white-color)) !important;
+}
+.hover\:text-black:hover{
+    color: rgb(var(--black-color)) !important;
+}
+.hover\:text-transparent:hover{
+    color: transparent !important;
+}
+
+.hover\:border-primary:hover{
+    border-color: rgb(var(--primary-color)) !important;
+}
+.hover\:border-secondary:hover{
+    border-color: rgb(var(--secondary-color)) !important;
+}
+.hover\:border-third:hover{
+    border-color: rgb(var(--third-color)) !important;
+}
+.hover\:border-soft:hover{
+    border-color: rgb(var(--soft-color)) !important;
+}
+.hover\:border-white:hover{
+    border-color: rgb(var(--white-color)) !important;
+}
+.hover\:border-black:hover{
+    border-color: rgb(var(--black-color)) !important;
+}
+.hover\:border-transparent:hover{
+    border-color: transparent !important;
+}

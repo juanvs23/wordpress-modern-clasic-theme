@@ -3,8 +3,7 @@
 Ruta del proyecto: /wp-content/themes/nuevo-theme
 
 Resumen breve:
--- Tema de WordPress "Ignite Theme" (boilerplate) que usa TailwindCSS.
-- Estructura incluye integraciones de Node (Tailwind) y soporte de autoload PSR-4 con Composer (composer.json presente aunque sin dependencias).
+- Tema de WordPress "Ignite Theme" (boilerplate). (Anteriormente usaba TailwindCSS; ahora eliminado.)
 - Desencola estilos de Gutenberg y las funcionalidades PHP están organizadas en `inc/features/`.
 
 Arquitectura actual (Screaming Architecture aplicada para PHP):
@@ -17,11 +16,11 @@ Archivos y carpetas importantes:
 - `style.css` (cabecera del tema)
 - `functions.php` (defines y carga centralizada: `inc/bootstrap.php`)
 - `inc/` (PHP del tema, con `inc/features/*`)
-- `package.json`, `package-lock.json`, `node_modules/` (build de Tailwind)
-- `postcss.config.mjs`, `tailwind.config.js`, `src/` (origen de estilos, assets frontend)
+-- `package.json`, `package-lock.json`, `node_modules/` (antes usados para el build de frontend)
+-- `src/` (origen de estilos y assets frontend). El pipeline con Tailwind fue removido.
 - `composer.json`, `vendor/` (vacío en "require"). Autoload apunta a `inc/`.
 - `README.md` (instrucciones rápidas)
-- `assets/css/style.css` (salida compilada de Tailwind)
+-- `assets/css/` (aquí debía ir la salida CSS; Tailwind fue removido)
 
 Extracto de `functions.php` (actual):
 ```
@@ -63,13 +62,7 @@ Estructura de setups y features (ejemplos creados):
 
 Instrucciones para desarrolladores tras la reestructuración:
 
-1) Para instalar dependencias de Node y compilar Tailwind:
-
-```bash
-cd wp-content/themes/nuevo-theme
-npm install
-npm run build
-```
+1) El pipeline de build CSS con Tailwind fue eliminado. Si necesitas añadir un nuevo proceso de build (PostCSS, Sass, etc.), configura `package.json` y los ficheros de configuración según tu herramienta preferida.
 
 2) Si usas Composer para autoload PHP (opcional):
 
@@ -77,7 +70,7 @@ npm run build
 composer dump-autoload
 ```
 
-3) Verifica que `assets/css/style.css` esté presente y actualizado.
+3) Verifica que la carpeta `assets/css/` contenga las hojas de estilo necesarias para la apariencia del tema.
 
 Información del entorno (salida de comprobación en esta máquina):
 ```

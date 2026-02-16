@@ -1,0 +1,163 @@
+.the-hills-button-primary,.the-hills-buttons-primary .wp-block-button__link {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--white-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--primary-color)) !important;
+}
+.the-hills-button-primary:hover,.the-hills-buttons-primary .wp-block-button__link:hover {
+    background-color: transparent !important;
+    color: rgb(var(--primary-color));
+}
+.the-hills-button-secondary,.the-hills-buttons-secondary .wp-block-button__link {
+    background-color: rgb(var(--secondary-color));
+    color: rgb(var(--white-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--secondary-color)) !important;
+}
+.the-hills-button-secondary:hover,.the-hills-buttons-secondary .wp-block-button__link:hover {
+    background-color: transparent !important;
+    color: rgb(var(--secondary-color));
+}
+.wpcf7 form  .lateral-form .wpcf7-form-control.wpcf7-submit{
+    display: block;
+    width: 100%;
+}
+
+.wpcf7 form .wpcf7-form-control.wpcf7-submit,
+.the-hills-button-black,.the-hills-buttons-black .wp-block-button__link {
+    background-color: rgb(var(--black-color));
+    color: rgb(var(--white-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--black-color)) !important;
+}
+.wpcf7 form .wpcf7-form-control.wpcf7-submit:hover,
+.the-hills-button-black:hover,.the-hills-buttons-black .wp-block-button__link:hover {
+    background-color: transparent !important;
+    color: rgb(var(--black-color));
+}
+.the-hills-button-primary-secondary,.the-hills-buttons-primary-secondary .wp-block-button__link {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--white-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--secondary-color)) !important;
+}
+.the-hills-button-primary-secondary:hover,.the-hills-buttons-primary-secondary .wp-block-button__link:hover {
+    background-color: rgb(var(--secondary-color)) !important;
+    color: rgb(var(--white-color));
+}
+.the-hills-button-secondary-primary,.the-hills-buttons-secondary-primary .wp-block-button__link {
+    background-color: rgb(var(--secondary-color));
+    color: rgb(var(--white-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--secondary-color)) !important;
+}
+.the-hills-button-secondary-primary:hover,.the-hills-buttons-secondary-primary .wp-block-button__link:hover {
+    background-color: rgb(var(--primary-color)) !important;
+    color: rgb(var(--white-color));
+    border-color: rgb(var(--primary-color)) !important;
+}
+.the-hills-button-third-primary,.the-hills-buttons-third-primary .wp-block-button__link {
+    background-color: rgb(var(--third-color));
+    color: rgb(var(--primary-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--third-color)) !important;
+}
+.the-hills-button-third-primary:hover,.the-hills-buttons-third-primary .wp-block-button__link:hover {
+    background-color: rgb(var(--primary-color)) !important;
+    color: rgb(var(--third-color));
+    border-color: rgb(var(--primary-color)) !important;
+}
+.the-hills-button-primary-third,.the-hills-buttons-primary-third .wp-block-button__link {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--white-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--primary-color)) !important;
+}
+.the-hills-button-primary-third:hover,.the-hills-buttons-primary-third .wp-block-button__link:hover {
+    background-color: rgb(var(--third-color)) !important;
+    color: rgb(var(--white-color));
+    border-color: rgb(var(--third-color)) !important;
+}
+.the-hills-button-white-secondary,.the-hills-buttons-white-secondary .wp-block-button__link{
+    background-color: rgb(var(--white-color));
+    color: rgb(var(--secondary-color));
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(var(--white-color)) !important;
+} 
+.the-hills-button-white-secondary:hover,.the-hills-buttons-white-secondary .wp-block-button__link:hover{
+    background-color: rgb(var(--secondary-color)) !important;
+    color: rgb(var(--white-color));
+    border-color: rgb(var(--secondary-color)) !important;
+}

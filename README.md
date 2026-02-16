@@ -10,9 +10,7 @@ Instrucciones rápidas:
 
    npm install
 
-3) Compilar Tailwind:
-
-   npm run build
+3) (Tailwind removed) Si necesitas compilar CSS, añade tu propio pipeline de build.
 
 4) Activar el tema desde el panel de WordPress.
 
