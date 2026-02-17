@@ -10,3 +10,8 @@ $dir = get_template_directory() . '/inc/features';
 //     require_once __DIR__ . '/services/posttype.php';
 // }
 
+// Cargar feature: button-class-select
+if ( file_exists( __DIR__ . '/button-class-select/button-class-select.php' ) ) {
+	require_once __DIR__ . '/button-class-select/button-class-select.php';
+}
+

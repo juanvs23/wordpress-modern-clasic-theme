@@ -1,12 +1,15 @@
 <?php
 /**
- * Loader de `inc/filters` - incluye filtros de WordPress
+ * Loader de filtros en `inc/filters`.
+ * Aquí se deben incluir (require_once) todos los módulos de la carpeta filters.
  */
 
-$dir = get_template_directory() . '/inc/filters';
-// NO AUTOLOAD: añade filtros manualmente con require_once
-// Ejemplo:
-// if ( file_exists( __DIR__ . '/custom-filters.php' ) ) {
-//     require_once __DIR__ . '/custom-filters.php';
-// }
+defined( 'ABSPATH' ) || exit;
+
+// Cargar svg-uploads si existe
+if ( file_exists( __DIR__ . '/svg-uploads.php' ) ) {
+    require_once __DIR__ . '/svg-uploads.php';
+}
+
+// Añadir aquí futuras inclusiones de filtros de la carpeta.
 

@@ -1,5 +1,11 @@
 # Contexto del proyecto: Ignite Theme
 
+## Regla de arquitectura: ubicación de funcionalidades
+
+- Texto añadido: "toda funcionalidad que no se tenga que aplicar en el hook `init` debe ir en `after_setup_theme` o `widgets_init` según corresponda; toda funcionalidad extra debe colocarse en `inc/features`."
+
+- Explicación breve: cualquier funcionalidad del tema que no deba ejecutarse en el hook `init` (p. ej. soportes del tema, registro de imágenes, menús) debe engancharse en `after_setup_theme`; los registros de widgets deben ir en `widgets_init`. El código modular extra y los módulos/feature del tema deben vivir en la carpeta `inc/features` y cargarse desde `inc/features/features.php`.
+
 Ruta del proyecto: /wp-content/themes/nuevo-theme
 
 Resumen breve:
@@ -164,6 +170,32 @@ Acción para asistentes/IA:
 - Al automatizar refactorizaciones o migraciones, primero buscar patrones: `wp_enqueue_script`, `wp_enqueue_style`, `wp_dequeue_style`, `wp_dequeue_script`, `wp_deregister_script`, `wp_deregister_style`.
 - Si se encuentra alguno fuera de `inc/scripts`, mover el código funcional a `inc/scripts` y dejar en su lugar un pequeño loader que requiera el archivo en `inc/scripts` (si se desea mantener compatibilidad durante la transición).
 - Actualizar `PROJECT_CONTEXT.md` y comentar en los cambios de git la intención: "mover assets a `inc/scripts` según convención".
+
+Regla de loaders y modularización (OBLIGATORIO)
+
+- El loader principal del tema es `inc/bootstrap.php`. Este archivo es el único punto que incluye los loaders de carpeta de primer nivel (por ejemplo `inc/filters/filters.php`, `inc/features/features.php`, `inc/scripts/scripts.php`, etc.).
+- Cada carpeta módulo (por ejemplo `inc/filters`, `inc/features`, `inc/scripts`, `inc/functions`, `inc/extras`) DEBE tener su propio loader en la raíz de la carpeta llamado como la carpeta seguida de `.php` (ej. `inc/filters/filters.php`).
+- Todas las inclusiones (require_once) de ficheros que pertenecen a una carpeta deben realizarse exclusivamente desde el loader de esa carpeta. Por ejemplo, si se añade `svg-uploads.php` dentro de `inc/filters/`, su inclusión debe estar en `inc/filters/filters.php`:
+
+    if ( file_exists( __DIR__ . '/svg-uploads.php' ) ) {
+        require_once __DIR__ . '/svg-uploads.php';
+    }
+
+- NO se debe incluir directamente un fichero perteneciente a otra carpeta desde fuera de su loader (por ejemplo: no incluir `inc/filters/svg-uploads.php` desde `inc/setups/theme-setup.php`). Siempre pasar por el loader de la carpeta correspondiente.
+- Nunca añadir scripts, enqueues, o módulos en carpetas ajenas a la estructura. Si un fichero realiza `wp_enqueue_*` o gestiona assets debe vivir en `inc/scripts` y ser requerido desde `inc/scripts/scripts.php`.
+- El propósito: mantener una jerarquía clara y predecible donde `inc/bootstrap.php` orquesta la carga de loaders por dominio, y cada loader orquesta sus módulos internos.
+
+Cumplimiento y automatizaciones:
+- Las automatizaciones y asistentes (IA, scripts) deben respetar esta regla: al añadir un nuevo módulo, crear/actualizar el loader de su carpeta y añadir el `require_once` correspondiente en ese loader, y no modificar loaders de otras carpetas salvo para añadir su propio `require_once`.
+
+Changelog y versionado
+
+- Todas las modificaciones relevantes del proyecto deben documentarse en `CHANGELOG.md` en la raíz del tema. El `CHANGELOG.md` seguirá Semantic Versioning (SemVer) y deberá incluir entradas para `Added`, `Changed`, `Fixed`, `Removed`, `Deprecated`, y `Security` según corresponda.
+- En cada release, además del `CHANGELOG.md`, se actualizarán los siguientes archivos para reflejar la nueva versión y notas de la release:
+    - `style.css` (cabecera del tema y versión)
+    - `functions.php` (si aplica, incluir notas de migración o flags de compatibilidad)
+- Convención operativa: los fixes, cambios mayores y nuevas funcionalidades se registran en `CHANGELOG.md` y las versiones siguen SemVer. Los incrementos de versión y la actualización de `style.css` / `functions.php` deben hacerse al crear la release.
+
 
 Estructura de referencia (ejemplo `root`) - obligación de cumplimiento:
 

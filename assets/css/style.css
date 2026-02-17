@@ -176,3 +176,22 @@ button, .button, input[type="button"], input[type="reset"], input[type="submit"]
     appearance: none;
     box-shadow: none;
 }
+
+/* Custom logo basic styles */
+.site-logo img,
+.custom-logo {
+    max-height: 80px;
+    width: auto;
+    display: inline-block;
+}
+
+.site-title-wrap .site-title {
+    margin: 0;
+    font-size: var(--text);
+}
+
+.site-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(var(--soft-color));
+}
