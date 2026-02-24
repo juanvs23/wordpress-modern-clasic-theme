@@ -7,7 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
     <header class="site-header">
-        <div class="ignite-container flex items-center justify-between py-16">
+        <div class="container flex items-center justify-between py-16">
             <div class="site-branding flex items-center gap-16">
                 <?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
                     <div class="site-logo">

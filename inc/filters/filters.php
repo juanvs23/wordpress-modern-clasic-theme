@@ -1,15 +1,15 @@
 <?php
 /**
- * Loader de filtros en `inc/filters`.
- * Aquí se deben incluir (require_once) todos los módulos de la carpeta filters.
+ * Filters loader in `inc/filters`.
+ * All modules in the filters folder should be included here using `require_once`.
  */
 
 defined( 'ABSPATH' ) || exit;
 
-// Cargar svg-uploads si existe
+// Load svg-uploads if it exists
 if ( file_exists( __DIR__ . '/svg-uploads.php' ) ) {
     require_once __DIR__ . '/svg-uploads.php';
 }
 
-// Añadir aquí futuras inclusiones de filtros de la carpeta.
+// Add future filter inclusions from this folder here.
 

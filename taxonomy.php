@@ -3,12 +3,12 @@ get_header();
 
 $term         = get_queried_object();
 $term_name    = $term && isset( $term->name ) ? $term->name : '';
-$term_title   = $term_name ? $term_name : esc_html__( 'Archivo de taxonomía', 'ignite-theme' );
+$term_title   = $term_name ? $term_name : esc_html__( 'Taxonomy archive', 'ignite-theme' );
 $term_content = term_description();
 ?>
 
 <main id="site-content" class="ignite-section bg-soft">
-    <div class="ignite-container">
+    <div class="container">
         <header class="archive-header text-center mb-44">
             <h1 class="h2 bold text-primary mb-16"><?php echo esc_html( $term_title ); ?></h1>
             <?php if ( $term_content ) : ?>
@@ -40,7 +40,7 @@ $term_content = term_description();
                                 ?>
                             </p>
                             <a class="the-hills-button-primary w-fit" href="<?php the_permalink(); ?>">
-                                <?php esc_html_e( 'Leer más', 'ignite-theme' ); ?>
+                                <?php esc_html_e( 'Read more', 'ignite-theme' ); ?>
                             </a>
                         </div>
                     </article>
@@ -52,8 +52,8 @@ $term_content = term_description();
                 the_posts_pagination(
                     array(
                         'mid_size'  => 1,
-                        'prev_text' => esc_html__( 'Anterior', 'ignite-theme' ),
-                        'next_text' => esc_html__( 'Siguiente', 'ignite-theme' ),
+                        'prev_text' => esc_html__( 'Previous', 'ignite-theme' ),
+                        'next_text' => esc_html__( 'Next', 'ignite-theme' ),
                     )
                 );
                 ?>

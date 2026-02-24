@@ -6,7 +6,7 @@ $tag_description = tag_description();
 ?>
 
 <main id="site-content" class="ignite-section bg-soft">
-    <div class="ignite-container">
+    <div class="container">
         <header class="archive-header text-center mb-44">
             <h1 class="h2 bold text-primary mb-16"><?php echo esc_html( $tag_title ); ?></h1>
             <?php if ( $tag_description ) : ?>

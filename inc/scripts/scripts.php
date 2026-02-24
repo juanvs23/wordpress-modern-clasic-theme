@@ -1,12 +1,12 @@
 <?php
 /**
- * Loader de `inc/scripts` - requiere explícitamente los archivos de assets
+ * Loader for `inc/scripts` - explicitly require asset files
  *
- * NOTA: No se utiliza autoloading dinámico para mantener control manual
- * sobre qué archivos se cargan. Añade aquí require_once con `__DIR__`.
+ * NOTE: Dynamic autoloading is not used to keep manual control
+ * over which files are loaded. Add `require_once` entries here using `__DIR__`.
  */
 
-// Enqueue/dequeue explícitos
+// Explicit enqueue/dequeue includes
 if ( file_exists( __DIR__ . '/enqueue.php' ) ) {
     require_once __DIR__ . '/enqueue.php';
 }

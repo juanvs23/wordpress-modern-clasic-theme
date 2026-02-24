@@ -1,9 +1,9 @@
 <?php
 /**
- * Loader de `inc/setups` - require explícito de configuraciones del tema
+ * Loader for `inc/setups` - explicit requires for theme setups
  *
- * No se hace autoload; añadir aquí `require_once __DIR__ . '/archivo.php'`
- * para cada módulo de setup que quieras cargar manualmente.
+ * There is no autoloading; add `require_once __DIR__ . '/file.php'`
+ * for each setup module you want to load manually.
  */
 
 if ( file_exists( __DIR__ . '/theme-setup.php' ) ) {

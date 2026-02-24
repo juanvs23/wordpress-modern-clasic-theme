@@ -38,6 +38,8 @@
     --p50: 50%;
     --p75: 75%;
     --p100: 100%;
+    --container-padding: 16px;
+    --container-max-width: 1200px;
 }
 /* Reset pequeño para estilos por defecto del navegador (insertado en línea 43) */
 :where(html, body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, blockquote, pre, img, video, svg, button, input, textarea, select) {

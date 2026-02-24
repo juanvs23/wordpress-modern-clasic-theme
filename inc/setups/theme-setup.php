@@ -4,8 +4,8 @@
  * Ubicado en `inc/setups` para centralizar las configuraciones del tema
  */
 
-if ( ! function_exists( 'ignite_setup' ) ) {
-    function ignite_setup() {
+if ( ! function_exists( 'NEW_THEME_setup' ) ) {
+    function NEW_THEME_setup() {
         // Soportes básicos
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
@@ -26,10 +26,10 @@ if ( ! function_exists( 'ignite_setup' ) ) {
         }
     }
 }
-        add_action( 'after_setup_theme', 'ignite_setup' );
+        add_action( 'after_setup_theme', 'NEW_THEME_setup' );
 
 // Ejemplo de registro de widgets (si se requiere, puede ajustarse)
-function ignite_register_sidebars() {
+function NEW_THEME_register_sidebars() {
     // Footer: 6 columnas/widgets
     for ( $i = 1; $i <= 6; $i++ ) {
         register_sidebar( array(
@@ -67,6 +67,6 @@ function ignite_register_sidebars() {
         'after_title'   => '</h4>',
     ) );
 }
-add_action( 'widgets_init', 'ignite_register_sidebars' );
+add_action( 'widgets_init', 'NEW_THEME_register_sidebars' );
 
 

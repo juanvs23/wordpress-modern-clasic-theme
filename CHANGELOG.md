@@ -3,18 +3,18 @@
 All changes to this project are recorded in this file following Semantic Versioning (SemVer).
 
 ## [Unreleased]
-- Añadida feature `button-class-select` (extiende `core/button` con variantes e imágenes).
-- Añadido filtro para permitir subida de `svg`/`svgz` en `inc/filters/svg-uploads.php` (sin sanitización).
-- Añadidos loaders por carpeta: `inc/filters/filters.php`, `inc/features/features.php`.
-- Añadido `inc/bootstrap.php` como loader principal.
-- Añadidos README global y README para la feature `button-class-select`.
+- Added feature `button-class-select` (extends `core/button` with variants and image options).
+- Added filter to allow uploading `svg`/`svgz` in `inc/filters/svg-uploads.php` (without sanitization).
+- Added folder loaders: `inc/filters/filters.php`, `inc/features/features.php`.
+- Added `inc/bootstrap.php` as the main bootstrap loader.
+- Added global README and a README for the `button-class-select` feature.
 
 ## [0.1.0] - 2026-02-17
 ### Added
-- Feature `button-class-select` (atributos JS, encolado en editor, loader PHP).
-- Filtro `svg-uploads.php` para permitir SVGs.
-- Loaders y reorganización modular (`inc/bootstrap.php`, `inc/*/*-loader.php`).
-- Documentación: `PROJECT_CONTEXT.md`, `README.md`, `inc/features/button-class-select/README.md`.
+- Feature `button-class-select` (JS attributes, editor enqueue, PHP loader).
+- `svg-uploads.php` filter to allow SVG uploads.
+- Loaders and modular reorganization (`inc/bootstrap.php`, `inc/*/*-loader.php`).
+- Documentation: `PROJECT_CONTEXT.md`, `README.md`, `inc/features/button-class-select/README.md`.
 
 ---
 
@@ -25,5 +25,5 @@ Notes
   - Bump PATCH for backwards-compatible bug fixes.
 
 Files to update on releases
-- `style.css` — actualizar cabecera del tema y la versión en cada release.
-- `functions.php` — anotar cambios relevantes o señales de migración si aplica.
+- `style.css` — update the theme header and version on each release.
+- `functions.php` — annotate relevant changes or migration flags when applicable.

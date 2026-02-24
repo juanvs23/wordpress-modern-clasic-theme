@@ -1,100 +1,86 @@
-**Resumen de clases CSS del tema "the-hills"
-**
+**CSS classes overview for the "the-hills" theme**
 
-A continuación se agrupan y explican las clases encontradas en los archivos CSS de la carpeta `assets/css`. Para utilidades repetitivas (márgenes, paddings, tamaños responsivos, breakpoints) se explica el patrón y se ejemplifican clases representativas.
+This document groups and explains the classes found in the CSS files under the `assets/css` folder. For repetitive utilities (margins, paddings, responsive sizes, breakpoints) the general pattern is explained and representative examples are provided.
 
 **Borders.css**
-- ` .pt-border`: Aplica borde superior de 1px sólido.
-- ` .pb-border`: Aplica borde inferior de 1px sólido.
-- ` .pl-border`: Aplica borde izquierdo de 1px sólido.
-- ` .pr-border`: Aplica borde derecho de 1px sólido.
-- ` .border`: Borde de 1px sólido en todos los lados.
-- ` .max-sm:\pt-border`, ` .md:\pt-border`, ` .lg:\pt-border`, ` .xl:\pt-border` (y variantes pb/pl/pr/border): Versiones con prefijos responsivos aplicadas sólo en el rango de media query correspondiente.
+- ` .pt-border`: Applies a 1px solid top border.
+- ` .pb-border`: Applies a 1px solid bottom border.
+- ` .pl-border`: Applies a 1px solid left border.
+- ` .pr-border`: Applies a 1px solid right border.
+- ` .border`: 1px solid border on all sides.
+- ` .max-sm:\pt-border`, ` .md:\pt-border`, ` .lg:\pt-border`, ` .xl:\pt-border` (and pb/pl/pr/border variants): Responsive prefixed versions applied only within the matching media query range.
 
 **Buttons.css**
-- ` .the-hills-button-primary` / `.the-hills-buttons-primary .wp-block-button__link`: Botón primario; usa `--primary-color` como fondo, texto blanco, padding, border-radius (4px), font-weight 700; transición y borde con el mismo color.
-- ` :hover` en variantes primarias: invierte fondo (transparente) y muestra el color primario en el texto.
-- ` .the-hills-button-secondary`, ` .the-hills-button-black`, ` .the-hills-button-third-primary`, ` .the-hills-button-primary-secondary`, ` .the-hills-button-secondary-primary`, ` .the-hills-button-primary-third`, ` .the-hills-button-white-secondary`: Variantes temáticas de botón que cambian colores (secundario, tercer color, blanco, negro) y comportamiento en `:hover`.
-- ` .wpcf7 form .wpcf7-form-control.wpcf7-submit`: Estilo aplicado a submit de Contact Form 7 que coincide con el estilo de botón negro.
+- ` .the-hills-button-primary` / `.the-hills-buttons-primary .wp-block-button__link`: Primary button; uses `--primary-color` for background, white text, padding, 4px border-radius, font-weight 700; includes transition and a border using the same color.
+- ` :hover` on primary variants: inverted background (transparent) and primary color for the text.
+- Other thematic button variants: ` .the-hills-button-secondary`, ` .the-hills-button-black`, ` .the-hills-button-third-primary`, etc., change colors and hover behavior.
+- ` .wpcf7 form .wpcf7-form-control.wpcf7-submit`: Style applied to Contact Form 7 submit to match the black button style.
 
 **Carousels.css**
-- ` .testimonial-list`: Contenedor del slider con ancho calculado y centrado.
-  - ` .ignite-slick-button`: Botones del carousel con tamaño mínimo y uso de SVG centrado.
-- ` .slick-item-wrapp`: Padding lateral para items del slider.
-- ` .slick-dots` y ` .slick-dots li button`: Estilos para los puntos de navegación; tamaño, color por defecto (`--primary-color`) y color activo/hover (`--third-color`).
+- ` .testimonial-list`: Slider container with calculated width and centered layout.
+  - ` .ignite-slick-button`: Carousel buttons with minimum size and centered SVG usage.
+- ` .slick-item-wrapp`: Lateral padding for slider items.
+- ` .slick-dots` and ` .slick-dots li button`: Styles for navigation dots; size, default color (`--primary-color`) and active/hover color (`--third-color`).
 
 **Colors.css**
-- ` .bg-primary`, `.bg-secondary`, `.bg-third`, `.bg-soft`, `.bg-white`, `.bg-black`: Utilidades para establecer background-color con las variables CSS definidas en `:root`.
-- ` .text-primary`, `.text-secondary`, `.text-third`, `.text-soft`, `.text-white`, `.text-black`: Utilidades para color de texto.
-- ` .border-primary`, `.border-secondary`, etc.: Utilidades para color de borde.
-- ` .bg-transparent`, `.text-transparent`, `.border-transparent`: Utilidades para transparencia.
-- ` .hover\:bg-*`, `.hover\:text-*`, `.hover\:border-*`: Variantes que aplican el estilo correspondiente en `:hover` (nomenclatura escapada con `:` para compatibilidad tipo Tailwind).
+- ` .bg-primary`, `.bg-secondary`, etc.: Utilities to set background colors using CSS variables defined in `:root`.
+- ` .text-primary`, `.text-secondary`, etc.: Utilities for text color.
+- ` .border-primary`, `.border-secondary`, etc.: Utilities for border color.
+- ` .bg-transparent`, `.text-transparent`, `.border-transparent`: Transparency utilities.
+- ` .hover\:bg-*`, `.hover\:text-*`, `.hover\:border-*`: Hover variants that apply the corresponding style on `:hover` (naming escaped with `:` for Tailwind-like compatibility).
 
 **Font-sizes.css**
-- Reglas globales para `h1..h6` y alternativas `.h1 .h2 .h3 ...` que usan variables responsivas (`--h1-responsive`, `--h1-tablet`, `--h1`) para adaptar tamaños en distintos breakpoints.
-- Clases de peso de fuente: `.regular` (400), `.medium` (500), `.semibold` (600), `.bold` (600).
+- Global rules for `h1..h6` and alternate classes `.h1 .h2 .h3 ...` that use responsive variables (`--h1-responsive`, `--h1-tablet`, `--h1`) to adapt sizes across breakpoints.
+- Font-weight helper classes: `.regular` (400), `.medium` (500), `.semibold` (600), `.bold` (600).
 
 **Fonts.css**
-- `@font-face` para `Montserrat` en variantes regular/italic/bold/bold-italic, apuntando a `../fonts/`.
+- `@font-face` definitions for `Montserrat` in regular/italic/bold variants, pointing to `../fonts/`.
 
 **Gaps.css**
-- Utilidades ` .gap-0`, ` .gap-4`, ` .gap-8`, ` .gap-16`, ` .gap-24`, ` .gap-30`, ` .gap-44`, ` .gap-50`, ` .gap-100`: Establecen la propiedad `gap` con valores basados en variables (`--text`, `--h3`, `--h2`, `--h1`, `--h50`, `--h100`).
-- Versiones responsivas: prefijos `md:`, `lg:`, `xl:` (y `max-sm:` para mobile) para aplicar en diferentes breakpoints.
+- Utilities ` .gap-0`, ` .gap-4`, ` .gap-8`, ... ` .gap-100`: Set the `gap` property using values based on variables (`--text`, `--h3`, etc.).
+- Responsive versions: `md:`, `lg:`, `xl:` (and `max-sm:` for mobile) for different breakpoints.
 
 **General.css**
-- Variables en `:root`: definiciones de tamaños tipográficos (`--h1`, `--h2`, etc.), tamaños responsivos, colores (`--primary-color`, `--secondary-color`, `--third-color`, `--soft-color`, `--white-color`, `--black-color`) y porcentajes (`--p25`, etc.).
-- Reglas base: `body` usa `Montserrat`, tamaño `--text`, color `--primary-color`. `h1..h6` heredan color principal y peso 700.
+- Variables in `:root`: typography sizes (`--h1`, `--h2`, etc.), responsive sizes, colors (`--primary-color`, `--secondary-color`, `--third-color`, etc.), and percentages (`--p25`, etc.).
+- Base rules: `body` uses `Montserrat`, `--text` size, `--primary-color` for color. `h1..h6` inherit primary color and weight 700.
 
 **Heights.css**
-- Utilidades de altura: `.height-0`, `.h-100`, `.h-50`, `.h-40`, `.h-150` y max-height variantes: `.max-h-100`, `.max-h-150`.
+- Height utilities: `.height-0`, `.h-100`, `.h-50`, `.h-40`, `.h-150` and max-height variants like `.max-h-100`, `.max-h-150`.
 
 **Layout.css**
-- Contenedores: `.hero-banner`, `.ignite-section`, `.hero-text-container`, `.ignite-container` controlan padding y max-width (1200px).
+- Containers: `.hero-banner`, `.ignite-section`, `.hero-text-container`, `.container` control padding and max-width (1200px).
 - Display utilities: `.grid`, `.flex`, `.block`.
-- Grid columns: `.grid-cols-1` ... `.grid-cols-4` (configuran `grid-template-columns`).
-- Flex width/fraction helpers: `.flex-full`, `.flex-1\/3`, `.flex-2\/3`, `.flex-1\/2`, `.flex-1\/4`, `.flex-3\/4`, `.flex-1\/5`, `.flex-2\/5`, `.flex-3\/5`, `.flex-4\/5`, `.flex-1\/6`, `.flex-5\/6`, `.flex-2\/6`, `.flex-4\/6` — establecen `flex-basis` y `max-width` para columnas flex.
-- Versiones responsivas con prefijos `md:`, `lg:`, `xl:` para las mismas utilidades.
+- Grid columns: `.grid-cols-1` ... `.grid-cols-4`.
+- Flex width/fraction helpers: `.flex-full`, `.flex-1\/3`, etc., set `flex-basis` and `max-width` for flexible columns.
+- Responsive versions use `md:`, `lg:`, `xl:` prefixes.
 
 **Margins.css**
-- Utilidades `m-0`, `m-16`, `m-24`, `m-30`, `m-44`, `m-50`, `m-100` y variantes direccionadas: `mr-*`, `ml-*`, `mt-*`, `mb-*`, `mx-*`, `my-*`, `mx-auto`, `m-auto`.
-- Prefijos responsivos: `max-sm:\*`, `md:\*`, `lg:\*`, `xl:\*` para aplicar en distintos breakpoints.
+- Utilities `m-0`, `m-16`, `m-24`, ... and directional variants `mr-*`, `ml-*`, `mt-*`, `mb-*`, `mx-*`, `my-*`, `mx-auto`, `m-auto`.
+- Responsive prefixes: `max-sm:`, `md:`, `lg:`, `xl:`.
 
-**Paddiings.css**
-- Igual que margins pero para `padding`: `p-*`, `pr-*`, `pl-*`, `pt-*`, `pb-*`, `px-*`, `py-*`, con valores basados en variables (`--text`, `--h3`, `--h2`, `--h1`, `--h50`, `--h100`).
-- Prefijos responsivos `max-sm:`, `md:`, `lg:`, `xl:`.
+**Paddings.css**
+- Similar to margins but for `padding`: `p-*`, `pr-*`, `pl-*`, `pt-*`, `pb-*`, `px-*`, `py-*` with values based on variables.
 
 **Positions.css**
-- Posicionamiento: `.relative`, `.absolute`, `.fixed`, `.sticky`.
-- Posiciones positivas: `.top-0`, `.top-16`, `.top-30`, `.top-50`, `.top-100`, `.left-*`, `.right-*`, `.bottom-*` que usan variables para valores.
-- Posiciones negativas: `.-top-0`, `.-top-16`, etc., y porcentuales `.-top-p25`, `.-left-p25`, `.-top-p50`, etc.
-- Positivas porcentuales: `.top-p25`, `.left-p25`, `.right-p25`, `.bottom-p25`, etc.
-- Reglas responsivas replicadas en los media queries.
+- Position utilities: `.relative`, `.absolute`, `.fixed`, `.sticky`.
+- Positive position helpers: `.top-0`, `.top-16`, `.left-*`, etc.
+- Negative and percentage position helpers are also available, with responsive variants.
 
 **Radius.css**
-- Clases para `border-radius`: `.radius-4`, `.radius-8`, `.radius-12`, `.radius-16`, `.radius-20`, `.radius-24`, `.radius-32`, `.radius-50`, `.radius-100`, `.radius-full`, `.radius-0`.
-- Valores calculados a partir de `--text`, `--h50`, `--h100`. Versiones `md:`, `lg:`, `xl:` también definidas.
+- Border-radius classes: `.radius-4`, `.radius-8`, ... `.radius-full`, `.radius-0` with values derived from variables and responsive versions.
 
 **Style.css**
-- Clases específicas del tema/plantilla:
-  - `.lines-background`, `.line-bg-content`, `.line` : Controles para fondo de líneas (posición fija, ancho 1px, color semitransparente con `--third-color`).
-  - `a.the-hills-phone-button`, `span.the-hills-phone-icon`: Estilos para botón de teléfono flotante (padding, borde, tamaño, hover cambia background y color del SVG).
-  - Reglas para footer y su disposición: `.footer-right ul`, `footer ul a`, `.footer-widget-area`, `.social-links`, `.social-section`.
-  - Varias utilidades y componentes: `.hero-banner`, `.excursion-text` (overlay con fondo semitransparente, transiciones y comportamiento hover para `.readmore-button`), `.faq-answer-ignite` (oculto por defecto, `.show` lo muestra), `.latest-post-list`, `.term-list-item`, `.term-list-items`, `.term-accordeom-title.h4.bold`.
+- Theme/template specific classes like `.lines-background`, `.line-bg-content`, `.line` for line backgrounds, and floating phone button styles `a.the-hills-phone-button`.
+- Footer related rules and various utilities and components used across templates.
 
 **Utilities.css**
-- Alineación y texto: `.text-center`, `.text-left`, `.text-right`.
-- Flex utilities: `.items-center`, `.flex-col`, `.flex-row`, `.flex-reverse`, `.flex-col-reverse`, `.justify-center`, `.justify-end`, `.justify-between`, `.wrap`, `.nowrap`.
-- Sombras: `.shadow-base`.
-- Objet-fit: `.object-cover`, `.object-contain`.
-- Display helpers: `.hidden`, `.w-fit`, `.h-fit`, `.w-full`, `.h-full`, `.max-w-full`, `.mx-w-800`, `.mx-w-1000`.
-- Aspect-ratio helpers: `.aspect-w-16`, `.aspect-w-4`, `.aspect-w-1`, `.aspect-2\/3`.
-- Overflow helpers: `.overflow-hidden`, `.overflow-scroll`.
-- Transitions: `.transition`, `.transition-fast`, `.transition-slow`.
-- Responsivas con `md:`, `lg:`, `xl:` para las variantes de texto, flex y sombra.
+- Alignment and text helpers: `.text-center`, `.text-left`, `.text-right`.
+- Flex helpers: `.items-center`, `.flex-col`, `.flex-row`, `.justify-center`, `.justify-between`, etc.
+- Other utilities: `.shadow-base`, `.object-cover`, `.hidden`, `.w-full`, `.max-w-full`, aspect-ratio helpers, overflow helpers, transitions, and responsive variants.
 
-**Notas finales y patrones**
-- Muchas clases siguen un patrón utilitario al estilo Tailwind: prefijos de breakpoint (`max-sm:`, `md:`, `lg:`, `xl:`) y nombres abreviados (`m-`, `p-`, `gap-`, `h-`, `w-`, `radius-`, `text-`, `bg-`).
-- Variables CSS en `:root` centralizan colores y tamaños, por lo que modificar `--primary-color` / `--secondary-color` afectará múltiples utilidades.
-- Para encontrar la clase exacta usada en el HTML, buscar el nombre literal (ej. `.term-list-item`) pues muchas utilidades son intencionalmente genéricas.
+**Final notes and patterns**
+- Many classes follow a Tailwind-like utility pattern: breakpoint prefixes and short helper names (`m-`, `p-`, `gap-`, `h-`, `w-`, `radius-`, `text-`, `bg-`).
+- CSS variables in `:root` centralize colors and sizes — changing `--primary-color` / `--secondary-color` will affect many utilities.
+- To find the exact class used in HTML, search for the literal class name (e.g. `.term-list-item`) as many utilities are intentionally generic.
 
-Si quieres, genero una versión más detallada que liste cada clase en su propia línea (ahora agrupé patrones y ejemplos para mantener el archivo manejable). ¿Deseas la lista exhaustiva con cada clase por separado?
+If you want, I can generate a more detailed version that lists every class on its own line (this document groups patterns to keep it manageable). Do you want the exhaustive class list?

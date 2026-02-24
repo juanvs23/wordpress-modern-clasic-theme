@@ -9,7 +9,7 @@
     var MediaUpload = (wp.blockEditor && wp.blockEditor.MediaUpload) || (wp.editor && wp.editor.MediaUpload);
     var MediaUploadCheck = (wp.blockEditor && wp.blockEditor.MediaUploadCheck) || (wp.editor && wp.editor.MediaUploadCheck) || function() { return null; };
 
-    // Añadir atributos: clase, variante y URLs/IDs de imágenes
+    // Add attributes: class, variant and image URLs/IDs
     function addAttributes(settings, name) {
         if (name !== 'core/button') return settings;
         settings.attributes = Object.assign({}, settings.attributes, {
@@ -66,26 +66,26 @@
                     null,
                     createElement(
                         PanelBody,
-                        { title: 'Tipo de botón', initialOpen: true },
+                        { title: 'Button type', initialOpen: true },
                         createElement(SelectControl, {
-                            label: 'Variante',
+                            label: 'Variant',
                             value: attributes.ntVariant || 'variant-1',
                             options: [
-                                { label: '1 — con clases extras', value: 'variant-1' },
-                                { label: '2 — con imagen antes del texto', value: 'variant-2' },
-                                { label: '3 — con imagen después del texto', value: 'variant-3' },
-                                { label: '4 — imágenes antes y después', value: 'variant-4' }
+                                { label: '1 — extra classes only', value: 'variant-1' },
+                                { label: '2 — image before text', value: 'variant-2' },
+                                { label: '3 — image after text', value: 'variant-3' },
+                                { label: '4 — images before and after', value: 'variant-4' }
                             ],
                             onChange: function(val) { setAttributes({ ntVariant: val }); }
                         }),
                         createElement(SelectControl, {
-                            label: 'Seleccionar tipo de clase',
+                            label: 'Select class type',
                             value: attributes.classType || '',
                             options: [
-                                { label: 'Ninguno', value: '' },
-                                { label: 'Primario', value: 'btn-primary' },
-                                { label: 'Secundario', value: 'btn-secondary' },
-                                { label: 'Alerta', value: 'btn-alert' }
+                                { label: 'None', value: '' },
+                                { label: 'Primary', value: 'btn-primary' },
+                                { label: 'Secondary', value: 'btn-secondary' },
+                                { label: 'Alert', value: 'btn-alert' }
                             ],
                             onChange: function(val) { setAttributes({ classType: val }); }
                         }),
@@ -93,7 +93,7 @@
                         (attributes.ntVariant === 'variant-2' || attributes.ntVariant === 'variant-4') && createElement(
                             'div',
                             { style: { marginTop: '12px' } },
-                            createElement('strong', null, 'Imagen antes del texto'),
+                            createElement('strong', null, 'Image before text'),
                             createElement('div', { style: { marginTop: '8px' } },
                                 createElement(MediaUploadCheck, null,
                                     createElement(MediaUpload, {
@@ -101,13 +101,13 @@
                                         allowedTypes: [ 'image' ],
                                         value: attributes.ntImageBeforeID,
                                         render: function( obj ) {
-                                            return createElement( Button, { onClick: obj.open, isSecondary: true }, attributes.ntImageBeforeURL ? 'Cambiar imagen' : 'Seleccionar imagen' );
+                                            return createElement( Button, { onClick: obj.open, isSecondary: true }, attributes.ntImageBeforeURL ? 'Change image' : 'Select image' );
                                         }
                                     })
                                 ),
                                 attributes.ntImageBeforeURL && createElement('div', { style: { marginTop: '8px' } },
                                     createElement('img', { src: attributes.ntImageBeforeURL, style: { maxWidth: '100%', height: 'auto' } }),
-                                    createElement(Button, { style: { marginLeft: '8px' }, isDestructive: true, onClick: function(){ setAttributes({ ntImageBeforeID: undefined, ntImageBeforeURL: '' }); } }, 'Eliminar')
+                                    createElement(Button, { style: { marginLeft: '8px' }, isDestructive: true, onClick: function(){ setAttributes({ ntImageBeforeID: undefined, ntImageBeforeURL: '' }); } }, 'Remove')
                                 )
                             )
                         ),
@@ -115,7 +115,7 @@
                         (attributes.ntVariant === 'variant-3' || attributes.ntVariant === 'variant-4') && createElement(
                             'div',
                             { style: { marginTop: '12px' } },
-                            createElement('strong', null, 'Imagen después del texto'),
+                            createElement('strong', null, 'Image after text'),
                             createElement('div', { style: { marginTop: '8px' } },
                                 createElement(MediaUploadCheck, null,
                                     createElement(MediaUpload, {
@@ -123,13 +123,13 @@
                                         allowedTypes: [ 'image' ],
                                         value: attributes.ntImageAfterID,
                                         render: function( obj ) {
-                                            return createElement( Button, { onClick: obj.open, isSecondary: true }, attributes.ntImageAfterURL ? 'Cambiar imagen' : 'Seleccionar imagen' );
+                                            return createElement( Button, { onClick: obj.open, isSecondary: true }, attributes.ntImageAfterURL ? 'Change image' : 'Select image' );
                                         }
                                     })
                                 ),
                                 attributes.ntImageAfterURL && createElement('div', { style: { marginTop: '8px' } },
                                     createElement('img', { src: attributes.ntImageAfterURL, style: { maxWidth: '100%', height: 'auto' } }),
-                                    createElement(Button, { style: { marginLeft: '8px' }, isDestructive: true, onClick: function(){ setAttributes({ ntImageAfterID: undefined, ntImageAfterURL: '' }); } }, 'Eliminar')
+                                    createElement(Button, { style: { marginLeft: '8px' }, isDestructive: true, onClick: function(){ setAttributes({ ntImageAfterID: undefined, ntImageAfterURL: '' }); } }, 'Remove')
                                 )
                             )
                         )
