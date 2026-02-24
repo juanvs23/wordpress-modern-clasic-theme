@@ -1,5 +1,5 @@
     <footer class="site-footer">
-        <div class="ignite-section">
+        <div class="section">
             <?php if ( is_active_sidebar( 'media-section-1' ) || is_active_sidebar( 'media-section-2' ) || is_active_sidebar( 'media-section-3' ) || is_active_sidebar( 'media-section-4' ) || is_active_sidebar( 'media-section-5' ) ) : ?>
                 <div class="footer-media-section grid grid-cols-1 md:grid-cols-5 gap-24 mb-50">
                     <?php for ( $m = 1; $m <= 5; $m++ ) : ?>
@@ -25,7 +25,7 @@
             <?php endif; ?>
 
         </div>
-        <div class="footer-bottom ignite-section  radius-8 py-16 px-24">
+        <div class="footer-bottom section  radius-8 py-16 px-24">
             <div class="flex items-center justify-between">
                 <div class="footer-bottom-left">
                     <?php if ( is_active_sidebar( 'footer-bottom-copyright' ) ) : ?>

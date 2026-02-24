@@ -48,7 +48,7 @@ This document groups and explains the classes found in the CSS files under the `
 - Height utilities: `.height-0`, `.h-100`, `.h-50`, `.h-40`, `.h-150` and max-height variants like `.max-h-100`, `.max-h-150`.
 
 **Layout.css**
-- Containers: `.hero-banner`, `.ignite-section`, `.hero-text-container`, `.container` control padding and max-width (1200px).
+- Containers: `.hero-banner`, `.section`, `.hero-text-container`, `.container` control padding and max-width (1200px).
 - Display utilities: `.grid`, `.flex`, `.block`.
 - Grid columns: `.grid-cols-1` ... `.grid-cols-4`.
 - Flex width/fraction helpers: `.flex-full`, `.flex-1\/3`, etc., set `flex-basis` and `max-width` for flexible columns.

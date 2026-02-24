@@ -50,15 +50,7 @@
     color: rgb(var(--secondary-color));
     transition: all 0.3s ease;
 }
-.term-list-item {
-    border-radius: 4px;
-    padding: 10px 24px;
-    display: inline-block;
-    background: rgb(var(--soft-color));
-    font-weight: 600;
-    color: rgb(var(--primary-color));
-    transition: all 0.3s ease;
-}
+
 div#crumbs a {
     color: rgb(var(--gray-color));
     text-decoration: none;
@@ -102,7 +94,7 @@ label.ez-toc-title.ez-toc-toggle.ez-toc-loaded {
     top: 3px;
 }
 .table-content #ez-toc-container {
-    background: rgb(var(--soft-color));
+  
     border: none;
     border-radius: 4px;
     -webkit-box-shadow: none !important;
@@ -193,5 +185,5 @@ button, .button, input[type="button"], input[type="reset"], input[type="submit"]
 .site-description {
     margin: 0;
     font-size: 0.9rem;
-    color: rgb(var(--soft-color));
+    
 }

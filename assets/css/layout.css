@@ -1,12 +1,12 @@
 .hero-banner,
-.ignite-section {
-    padding-left: 16px;
-    padding-right: 16px;
+.section {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
     width: 100%;
 }
 .hero-text-container,
 .container{
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: auto;
 }
 .grid{

@@ -7,9 +7,7 @@
 .bg-third{
     background-color: rgb(var(--third-color)) !important;
 }
-.bg-soft{
-    background-color: rgb(var(--soft-color)) !important;
-}
+
 .bg-white{
     background-color: rgb(var(--white-color)) !important;
 }
@@ -25,9 +23,7 @@
 .text-third{
     color: rgb(var(--third-color)) !important;
 }
-.text-soft{
-    color: rgb(var(--soft-color)) !important;
-}
+
 .text-white{
     color: rgb(var(--white-color)) !important;
 }
@@ -42,9 +38,6 @@
 }
 .border-third{
     border-color: rgb(var(--third-color)) !important;
-}
-.border-soft{
-    border-color: rgb(var(--soft-color)) !important;
 }
 .border-white{
     border-color: rgb(var(--white-color)) !important;
@@ -73,9 +66,7 @@
 .hover\:bg-third:hover{
     background-color: rgb(var(--third-color)) !important;
 }
-.hover\:bg-soft:hover{
-    background-color: rgb(var(--soft-color)) !important;
-}
+
 .hover\:bg-white:hover{
     background-color: rgb(var(--white-color)) !important;
 }
@@ -95,9 +86,7 @@
 .hover\:text-third:hover{
     color: rgb(var(--third-color)) !important;
 }
-.hover\:text-soft:hover{
-    color: rgb(var(--soft-color)) !important;
-}
+
 .hover\:text-white:hover{
     color: rgb(var(--white-color)) !important;
 }
@@ -117,9 +106,7 @@
 .hover\:border-third:hover{
     border-color: rgb(var(--third-color)) !important;
 }
-.hover\:border-soft:hover{
-    border-color: rgb(var(--soft-color)) !important;
-}
+
 .hover\:border-white:hover{
     border-color: rgb(var(--white-color)) !important;
 }

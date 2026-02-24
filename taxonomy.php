@@ -7,7 +7,7 @@ $term_title   = $term_name ? $term_name : esc_html__( 'Taxonomy archive', 'ignit
 $term_content = term_description();
 ?>
 
-<main id="site-content" class="ignite-section bg-soft">
+<main id="site-content" class="section bg-soft">
     <div class="container">
         <header class="archive-header text-center mb-44">
             <h1 class="h2 bold text-primary mb-16"><?php echo esc_html( $term_title ); ?></h1>
