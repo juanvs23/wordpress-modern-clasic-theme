@@ -1,17 +1,17 @@
 
-.pt-border {
+.border-t {
   border-top-width: 1px;
   border-top-style: solid;
 }
-.pb-border {
+.border-b {
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
-.pl-border {
+.border-l {
   border-left-width: 1px;
   border-left-style: solid;
 }
-.pr-border {
+.border-r {
   border-right-width: 1px;
   border-right-style: solid;
 }
@@ -19,21 +19,30 @@
     border-width: 1px;
     border-style: solid;
 }
+.border-0 {
+  border-width: 0px;
+  border-style: solid;
+}
+
 
 @media (max-width:781px) {
-  .max-sm\:pt-border {
+  .max-sm\:border-t {
     border-top-width: 1px;
     border-top-style: solid;
   }
-  .max-sm\:pb-border {
+  .max-sm\:border-0 {
+    border-width: 0px;
+    border-style: solid;
+  }
+  .max-sm\:border-b {
     border-bottom-width: 1px;
     border-bottom-style: solid;
   }
-  .max-sm\:pl-border {
+  .max-sm\:border-l {
     border-left-width: 1px;
     border-left-style: solid;
   }
-  .max-sm\:pr-border {
+  .max-sm\:border-r {
     border-right-width: 1px;
     border-right-style: solid;
   }
@@ -44,19 +53,23 @@
 }
 
 @media (min-width:782px) {
-  .md\:pt-border {
+  .md\:border-t {
     border-top-width: 1px;
     border-top-style: solid;
   }
-  .md\:pb-border {
+  .md\:border-0 {
+    border-width: 0px;
+    border-style: solid;
+  }
+  .md\:border-b {
     border-bottom-width: 1px;
     border-bottom-style: solid;
   }
-  .md\:pl-border {
+  .md\:border-l {
     border-left-width: 1px;
     border-left-style: solid;
   }
-  .md\:pr-border {
+  .md\:border-r {
     border-right-width: 1px;
     border-right-style: solid;
   }
@@ -67,19 +80,23 @@
 }
 
 @media (min-width:922px) {
-  .lg\:pt-border {
+  .lg\:border-t {
     border-top-width: 1px;
     border-top-style: solid;
   }
-  .lg\:pb-border {
+  .lg\:border-0 {
+    border-width: 0px;
+    border-style: solid;
+  }
+  .lg\:border-b {
     border-bottom-width: 1px;
     border-bottom-style: solid;
   }
-  .lg\:pl-border {
+  .lg\:border-l {
     border-left-width: 1px;
     border-left-style: solid;
   }
-  .lg\:pr-border {
+  .lg\:border-r {
     border-right-width: 1px;
     border-right-style: solid;
   }
@@ -90,24 +107,28 @@
 }
 
 @media (min-width:1200px) {
-  .xl\:pt-border {
+  .xl\:border-t {
     border-top-width: 1px;
     border-top-style: solid;
   }
-  .xl\:pb-border {
+  .xl\:border-b {
     border-bottom-width: 1px;
     border-bottom-style: solid;
   }
-  .xl\:pl-border {
+  .xl\:border-l {
     border-left-width: 1px;
     border-left-style: solid;
   }
-  .xl\:pr-border {
+  .xl\:border-r {
     border-right-width: 1px;
     border-right-style: solid;
   }
   .xl\:border {
     border-width: 1px;
+    border-style: solid;
+  }
+  .xl\:border-0 {
+    border-width: 0px;
     border-style: solid;
   }
 }
