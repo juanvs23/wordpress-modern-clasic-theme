@@ -44,6 +44,7 @@ if ( ! function_exists( 'NEW_THEME_enqueue_assets' ) ) {
         wp_enqueue_style( $handle . 'menu-style', $assets_url . 'css/menu.css', array( $handle . 'child-style' ),NEW_THEME_VERSION );
 
         /*libs*/
+        //jquery (WordPress core)
         //swiper
         wp_enqueue_style( $handle . 'slick-style', $assets_url . 'libs/slick/slick.min.css', array(),NEW_THEME_VERSION );
         wp_enqueue_script( $handle . 'slick-script', $assets_url . 'libs/slick/slick.min.js', array( 'jquery' ),NEW_THEME_VERSION, [

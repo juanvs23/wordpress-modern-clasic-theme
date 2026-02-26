@@ -69,4 +69,16 @@ window.addEventListener('load', function() {
     if (typeof AOS !== 'undefined' && typeof AOS.refresh === 'function') {
         AOS.refresh();
     }
+    if(document.readyState === 'complete') {
+        AOS.refresh();
+    }
+    document.querySelectorAll('.wp-block-group').forEach(function(link) {
+       
+            setTimeout(function() {
+                console.log('object');
+                AOS.refresh();
+            }, 100);
+      
+    });
 });
+

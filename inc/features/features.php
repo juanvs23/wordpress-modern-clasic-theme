@@ -15,3 +15,8 @@ if ( file_exists( __DIR__ . '/button-class-select/button-class-select.php' ) ) {
 	require_once __DIR__ . '/button-class-select/button-class-select.php';
 }
 
+// Cargar feature: group-aos (extend core/group with AOS selector)
+if ( file_exists( __DIR__ . '/group-aos/group-aos.php' ) ) {
+	require_once __DIR__ . '/group-aos/group-aos.php';
+}
+

@@ -202,6 +202,15 @@ Regla de loaders y modularización (OBLIGATORIO)
 - El propósito: mantener una jerarquía clara y predecible donde `inc/bootstrap.php` orquesta la carga de loaders por dominio, y cada loader orquesta sus módulos internos.
 
 Cumplimiento y automatizaciones:
+
+- Nueva regla (módulos en `inc/features`):
+  - Cada módulo dentro de `inc/features/` seguirá la arquitectura "screaming" y será autocontenido dentro de su propia carpeta.
+  - Obligatorio: cada módulo debe disponer de un archivo principal cuyo nombre coincida con el de la carpeta del módulo (por ejemplo `inc/features/button-class-select/button-class-select.php`).
+  - Obligatorio: la inclusión del archivo principal del módulo debe realizarse siempre desde el loader de `inc/features` (`inc/features/features.php`) mediante un `require_once __DIR__ . '/<module-folder>/<module-file>.php'` explícito, tal y como demuestra el componente `button-class-select`.
+  - No se permitirán cargadores dinámicos ni inclusiones directas desde otras carpetas para los módulos de `inc/features`.
+  - Cualquier automatización que añada, mueva o renombre un módulo en `inc/features/` debe actualizar `inc/features/features.php` añadiendo el `require_once` correspondiente y documentarlo en el commit con referencia a este `PROJECT_CONTEXT.md`.
+
+Cumplimiento y automatizaciones:
 - Las automatizaciones y asistentes (IA, scripts) deben respetar esta regla: al añadir un nuevo módulo, crear/actualizar el loader de su carpeta y añadir el `require_once` correspondiente en ese loader, y no modificar loaders de otras carpetas salvo para añadir su propio `require_once`.
 
 Changelog y versionado
