@@ -9,6 +9,11 @@
     max-width: var(--container-max-width);
     margin: auto;
 }
+.container-fluid{
+    max-width: var(--container-max-fluid-width);
+    width: 100%;
+    margin: auto;
+}
 .grid{
     display: grid !important;
 }

@@ -25,8 +25,8 @@
             <?php endif; ?>
 
         </div>
-        <div class="footer-bottom section  radius-8 py-16 px-24">
-            <div class="flex items-center justify-between">
+        <div class="footer-bottom section  py-16 ">
+            <div class="flex items-center container-fluid justify-between">
                 <div class="footer-bottom-left">
                     <?php if ( is_active_sidebar( 'footer-bottom-copyright' ) ) : ?>
                         <?php dynamic_sidebar( 'footer-bottom-copyright' ); ?>
