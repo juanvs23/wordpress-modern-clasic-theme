@@ -3,6 +3,7 @@
     var createElement = wp.element.createElement;
     var Fragment = wp.element.Fragment;
     var InspectorControls = (wp.blockEditor && wp.blockEditor.InspectorControls) || (wp.editor && wp.editor.InspectorControls);
+    var BlockListBlock = (wp.blockEditor && wp.blockEditor.BlockListBlock) || (wp.editor && wp.editor.BlockListBlock);
     var PanelBody = wp.components.PanelBody;
     var SelectControl = wp.components.SelectControl;
     var Button = wp.components.Button;
@@ -140,47 +141,191 @@
     }
     addFilter('editor.BlockEdit', 'nt/button-class/inspector-controls', withInspectorControls);
 
-    // Aplicar clase e insertar imágenes en el HTML guardado según variante
+    function ensureEditorPreviewStyles() {
+        if (!document || document.getElementById('nt-button-class-editor-preview-styles')) {
+            return;
+        }
+
+        var style = document.createElement('style');
+        style.id = 'nt-button-class-editor-preview-styles';
+        style.textContent = '' +
+            '.nt-button-editor-preview .wp-block-button__link {' +
+                'display:inline-flex;' +
+                'align-items:center;' +
+                'gap:8px;' +
+            '}' +
+            '.nt-button-editor-preview.nt-button-has-before .wp-block-button__link::before {' +
+                'content:"";' +
+                'display:inline-block;' +
+                'width:1em;' +
+                'height:1em;' +
+                'background-image:var(--nt-editor-before-image);' +
+                'background-size:contain;' +
+                'background-repeat:no-repeat;' +
+                'background-position:center;' +
+                'flex:0 0 auto;' +
+            '}' +
+            '.nt-button-editor-preview.nt-button-has-after .wp-block-button__link::after {' +
+                'content:"";' +
+                'display:inline-block;' +
+                'width:1em;' +
+                'height:1em;' +
+                'background-image:var(--nt-editor-after-image);' +
+                'background-size:contain;' +
+                'background-repeat:no-repeat;' +
+                'background-position:center;' +
+                'flex:0 0 auto;' +
+            '}';
+
+        document.head.appendChild(style);
+    }
+
+    function withButtonEditorPreview(OriginalBlockListBlock) {
+        return function(props) {
+            if (!props || props.name !== 'core/button') {
+                return createElement(OriginalBlockListBlock, props);
+            }
+
+            ensureEditorPreviewStyles();
+
+            var attrs = props.attributes || {};
+            var variant = attrs.ntVariant || 'variant-1';
+            var beforeURL = attrs.ntImageBeforeURL || '';
+            var afterURL = attrs.ntImageAfterURL || '';
+
+            var hasBefore = (variant === 'variant-2' || variant === 'variant-4') && !!beforeURL;
+            var hasAfter = (variant === 'variant-3' || variant === 'variant-4') && !!afterURL;
+
+            var wrapperProps = Object.assign({}, props.wrapperProps || {});
+            var wrapperClassName = (wrapperProps.className || '') + ' nt-button-editor-preview' + (hasBefore ? ' nt-button-has-before' : '') + (hasAfter ? ' nt-button-has-after' : '');
+            var wrapperStyle = Object.assign({}, wrapperProps.style || {});
+
+            if (hasBefore) {
+                wrapperStyle['--nt-editor-before-image'] = 'url("' + beforeURL + '")';
+            } else {
+                wrapperStyle['--nt-editor-before-image'] = 'none';
+            }
+
+            if (hasAfter) {
+                wrapperStyle['--nt-editor-after-image'] = 'url("' + afterURL + '")';
+            } else {
+                wrapperStyle['--nt-editor-after-image'] = 'none';
+            }
+
+            return createElement(OriginalBlockListBlock, Object.assign({}, props, {
+                wrapperProps: Object.assign({}, wrapperProps, {
+                    className: wrapperClassName.trim(),
+                    style: wrapperStyle
+                })
+            }));
+        };
+    }
+
+    if (BlockListBlock) {
+        addFilter('editor.BlockListBlock', 'nt/button-class/editor-preview-images', withButtonEditorPreview);
+    }
+
+    // Apply class and inject images in saved HTML
     function addClassAndImagesToSaveElement(element, blockType, attributes) {
         if (!blockType || blockType.name !== 'core/button') return element;
-        var existing = element.props && element.props.className ? element.props.className : '';
         var extra = attributes && attributes.classType ? attributes.classType : '';
-        var className = (existing + (extra ? ' ' + extra : '')).trim();
+        var beforeURL = attributes && attributes.ntImageBeforeURL ? attributes.ntImageBeforeURL : '';
+        var afterURL = attributes && attributes.ntImageAfterURL ? attributes.ntImageAfterURL : '';
+        var variant = attributes && attributes.ntVariant ? attributes.ntVariant : 'variant-1';
 
-        // Normalizar hijos
-        var children = element.props && element.props.children !== undefined ? element.props.children : null;
-        var childrenArray = [];
-        if (children === null) {
-            childrenArray = [];
-        } else if (Array.isArray(children)) {
-            childrenArray = children.slice();
-        } else {
-            childrenArray = [children];
+        function normalizeChildren(children, props) {
+            if (children === null || children === undefined) {
+                var fallback = [];
+                if (props && (typeof props.value === 'string' || typeof props.value === 'number')) {
+                    fallback.push(props.value);
+                }
+                return fallback;
+            }
+            if (Array.isArray(children)) return children.slice();
+            return [ children ];
+        }
+
+        function packChildren(list) {
+            if (!list || list.length === 0) return null;
+            return list.length === 1 ? list[0] : list;
         }
 
         function makeImg(url, pos) {
             return createElement('img', { src: url, alt: '', className: 'nt-btn-image nt-image-' + pos });
         }
 
-        var beforeURL = attributes && attributes.ntImageBeforeURL ? attributes.ntImageBeforeURL : '';
-        var afterURL = attributes && attributes.ntImageAfterURL ? attributes.ntImageAfterURL : '';
-        var variant = attributes && attributes.ntVariant ? attributes.ntVariant : 'variant-1';
+        function applyImagesToChildren(list) {
+            var result = list.slice();
 
-        var newChildren = childrenArray.slice();
+            if ((variant === 'variant-2' || variant === 'variant-4') && beforeURL) {
+                result.unshift(makeImg(beforeURL, 'before'));
+            }
+            if ((variant === 'variant-3' || variant === 'variant-4') && afterURL) {
+                result.push(makeImg(afterURL, 'after'));
+            }
 
-        // Insert images depending on variant
-        if (variant === 'variant-2' && beforeURL) {
-            newChildren.unshift( makeImg(beforeURL, 'before') );
-        }
-        if (variant === 'variant-3' && afterURL) {
-            newChildren.push( makeImg(afterURL, 'after') );
-        }
-        if (variant === 'variant-4') {
-            if (beforeURL) newChildren.unshift( makeImg(beforeURL, 'before') );
-            if (afterURL) newChildren.push( makeImg(afterURL, 'after') );
+            return result;
         }
 
-        return createElement(element.type, Object.assign({}, element.props, { className: className }), newChildren.length === 1 ? newChildren[0] : newChildren);
+        function isButtonLinkNode(node) {
+            if (!node || typeof node !== 'object') return false;
+            if (node.type === 'a' || node.type === 'button') return true;
+            var cls = node.props && node.props.className;
+            return typeof cls === 'string' && cls.indexOf('wp-block-button__link') !== -1;
+        }
+
+        function injectIntoButtonLink(node) {
+            if (!node || typeof node !== 'object') {
+                return { node: node, updated: false };
+            }
+
+            if (isButtonLinkNode(node)) {
+                var linkChildren = normalizeChildren(node.props && node.props.children !== undefined ? node.props.children : null, node.props);
+                var linkClassName = ((node.props && node.props.className ? node.props.className : '') + (extra ? ' ' + extra : '')).trim();
+                var finalLinkChildren = applyImagesToChildren(linkChildren);
+
+                return {
+                    node: createElement(node.type, Object.assign({}, node.props, { className: linkClassName }), packChildren(finalLinkChildren)),
+                    updated: true
+                };
+            }
+
+            var children = normalizeChildren(node.props && node.props.children !== undefined ? node.props.children : null, node.props);
+            if (children.length === 0) {
+                return { node: node, updated: false };
+            }
+
+            var changed = false;
+            var updatedChildren = [];
+
+            for (var i = 0; i < children.length; i++) {
+                var childResult = injectIntoButtonLink(children[i]);
+                updatedChildren.push(childResult.node);
+                if (childResult.updated) {
+                    changed = true;
+                }
+            }
+
+            if (!changed) {
+                return { node: node, updated: false };
+            }
+
+            return {
+                node: createElement(node.type, Object.assign({}, node.props), packChildren(updatedChildren)),
+                updated: true
+            };
+        }
+
+        var injected = injectIntoButtonLink(element);
+        if (injected.updated) {
+            return injected.node;
+        }
+
+        // Fallback if no link node is found
+        var rootChildren = normalizeChildren(element.props && element.props.children !== undefined ? element.props.children : null, element.props);
+        var rootClassName = ((element.props && element.props.className ? element.props.className : '') + (extra ? ' ' + extra : '')).trim();
+        var finalRootChildren = applyImagesToChildren(rootChildren);
+        return createElement(element.type, Object.assign({}, element.props, { className: rootClassName }), packChildren(finalRootChildren));
     }
     addFilter('blocks.getSaveElement', 'nt/button-class/add-class-and-images-to-save', addClassAndImagesToSaveElement);
 
