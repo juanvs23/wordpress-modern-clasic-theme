@@ -76,17 +76,30 @@
                                 { label: '2 — image before text', value: 'variant-2' },
                                 { label: '3 — image after text', value: 'variant-3' },
                                 { label: '4 — images before and after', value: 'variant-4' }
+                                
                             ],
                             onChange: function(val) { setAttributes({ ntVariant: val }); }
                         }),
                         createElement(SelectControl, {
                             label: 'Select class type',
-                            value: attributes.classType || '',
+                            value: attributes.classType || 'basic',
                             options: [
-                                { label: 'None', value: '' },
-                                { label: 'Primary', value: 'btn-primary' },
-                                { label: 'Secondary', value: 'btn-secondary' },
-                                { label: 'Alert', value: 'btn-alert' }
+                                { label: 'None', value: 'basic' },
+                                { label: 'Primary', value: 'basic btn-primary' },
+                                { label: 'Secondary', value: 'basic btn-secondary' },
+                                { label: 'Ternary', value: 'basic btn-ternary' },
+                                { label: 'Primary reverse', value: 'basic btn-primary-reverse' },
+                                { label: 'Secondary reverse', value: 'basic btn-secondary-reverse' },
+                                { label: 'Ternary reverse', value: 'basic btn-ternary-reverse' },
+                                { label: 'Primary outline', value: 'basic btn-primary-outline' },
+                                { label: 'Secondary outline', value: 'basic btn-secondary-outline' },
+                                { label: 'Ternary outline', value: 'basic btn-ternary-outline' },
+                                { label: 'Primary reverse outline', value: 'basic btn-primary-reverse-outline' },
+                                { label: 'Secondary reverse outline', value: 'basic btn-secondary-reverse-outline' },
+                                { label: 'Ternary reverse outline', value: 'basic btn-ternary-reverse-outline' }
+                                
+
+                                
                             ],
                             onChange: function(val) { setAttributes({ classType: val }); }
                         }),

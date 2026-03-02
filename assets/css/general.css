@@ -61,7 +61,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: var(--text);
+    overflow-x: hidden;
     line-height:1.5;
+    margin: 0;
+    width: 100%;
     font-weight:400;
     color: rgb(var(--primary-color));
     overscroll-behavior: smooth;
