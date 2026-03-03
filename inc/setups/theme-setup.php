@@ -24,6 +24,28 @@ if ( ! function_exists( 'NEW_THEME_setup' ) ) {
                         'primary' => __( 'Primary Menu', 'ignite-theme' ),
                     ) );
         }
+        
+        //support for appearance tools (site editor, template parts, etc.)
+        add_theme_support( 'appearance-tools' );
+        
+        // support for full site editing features (if needed, can be adjusted based on theme requirements)
+        add_theme_support( 'title-tag' );
+        
+        // support for wide and full alignments in the block editor (Gutenberg)
+        add_theme_support( 'align-wide' );
+        
+        // support for custom header
+        add_theme_support('custom-header');
+        
+        // support post formats (if the theme will use different post formats, can be adjusted based on needs)
+        add_theme_support('post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+        
+        // support for HTML5 markup for search forms, comment forms, comment lists, galleries, and captions
+        add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption') );
+        
+        // support for editor styles (if the theme will have custom styles in the block editor, can be adjusted based on needs)
+      //  add_theme_support('editor-styles');
+
     }
 }
         add_action( 'after_setup_theme', 'NEW_THEME_setup' );
